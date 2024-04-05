@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<QCARInfo>
+    <TargetSet version="36.0" toolVersion="v6.2.14">
+        <ModelTarget name="Flask" targetId="ac7f040e0f4b400d8de22f028da81dd6" version="13.0" toolVersion="v6.2.14" bbox="-0.052187 -0.000088 -0.052190 0.052190 0.180088 0.052187" trackingMode="car" upVector="0.0 1.0 0.0" optimizeTrackingFor="low_feature_objects" realisticTextures="no" />
+    </TargetSet>
+    <Assembly name="Flask" assemblyId="812681780c1140ce8547c7cad056b434">
+        <Part name="Flask" translation="0 0 0" rotation="AD: 0 0 1 0" />
+        <EntryPoint name="(none)" trained="yes" />
+    </Assembly>
+</QCARInfo>
