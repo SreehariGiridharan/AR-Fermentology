@@ -4,12 +4,7 @@ public class ChangeRenderingMode : MonoBehaviour
 {
     public Material material; // Reference to the material whose rendering mode you want to change
 
-    void Start()
-    {
-        // Ensure the material reference is not null
-        MaterialChange();
-        
-    }
+    
     void MaterialChange()
         {
         if(material != null)
