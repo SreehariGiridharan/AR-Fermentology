@@ -5,9 +5,11 @@ public class SpawnObjectInsideCylinder : MonoBehaviour
 {
     public GameObject objectToSpawn; // Reference to the object prefab you want to spawn
     public GameObject cylinderObject; // Reference to the cylinder GameObject
+    public GameObject textObject; // Reference to the text GameObject to toggle
     public int maxSpawnedObjects = 10; // Maximum number of spawned objects
 
     private Queue<GameObject> spawnedObjects = new Queue<GameObject>(); // Queue to store spawned objects
+    private int spawnCount = 0; // Counter to track the number of spawns
 
     // Function to spawn the object inside the cylinder
     public void SpawnObjectInsideCylinderShape()
@@ -41,6 +43,14 @@ public class SpawnObjectInsideCylinder : MonoBehaviour
         GameObject newObject = Instantiate(objectToSpawn, randomPositionInsideCylinder, randomRotation);
 
         spawnedObjects.Enqueue(newObject); // Add the spawned object to the queue
+        spawnCount++; // Increment the spawn count
+
+        // Toggle the text object's active state when the fifth object is spawned
+        if (spawnCount % 5 == 0)
+        {
+            textObject.SetActive(true); // Activate the text object
+            Invoke("DeactivateText", 1f); // Deactivate the text object after 1 second
+        }
 
         // Remove the oldest spawned object if the queue size exceeds the maximum
         if (spawnedObjects.Count > maxSpawnedObjects)
@@ -50,6 +60,12 @@ public class SpawnObjectInsideCylinder : MonoBehaviour
         }
 
         print("Spawn complete");
+    }
+
+    // Function to deactivate the text object
+    private void DeactivateText()
+    {
+        textObject.SetActive(false); // Deactivate the text object
     }
 
     // Function to check if a position is inside the cylinder
