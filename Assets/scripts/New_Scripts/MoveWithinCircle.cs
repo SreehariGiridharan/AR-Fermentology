@@ -3,7 +3,7 @@ using UnityEngine;
 public class MoveWithinCircle : MonoBehaviour
 {
     public float moveSpeed = 1.0f; // Speed of movement
-    public Rigidbody rb;
+    
     public float moveDuration = 5.0f; // Duration of movement in seconds
     private float elapsedTime = 0.0f; // Time elapsed since movement started
     private float angleX, angleY, angleZ;
@@ -46,7 +46,7 @@ public class MoveWithinCircle : MonoBehaviour
                 RotateAngle(angleX, angleY, angleZ);
                 changer=false;
                 elapsedTime = 0.0f;
-                Debug.Log("angle changed");
+                // Debug.Log("angle changed");
             }
         }
         if (transform.localPosition.y > (cubePos.y+(cubeHeight/2)) || transform.localPosition.y < (cubePos.y-(cubeHeight/2)) )
@@ -59,7 +59,7 @@ public class MoveWithinCircle : MonoBehaviour
                 RotateAngle(angleX, angleY, angleZ);
                 changer=false;
                 elapsedTime = 0.0f;
-                Debug.Log("angle changed");
+                // Debug.Log("angle changed");
             }
         }
         if (transform.localPosition.z > (cubePos.z+(cubeBreadth/2)) || transform.localPosition.z < (cubePos.z-(cubeBreadth/2)) )
@@ -72,17 +72,18 @@ public class MoveWithinCircle : MonoBehaviour
                 RotateAngle(angleX, angleY, angleZ);
                 changer=false;
                 elapsedTime = 0.0f;
-                Debug.Log("angle changed");
+                // Debug.Log("angle changed");
             }
         }
-        rb.MovePosition(transform.position + transform.up * moveSpeed * Time.deltaTime);
+        
+        transform.position +=transform.up * moveSpeed * Time.deltaTime;
 
         
         if (elapsedTime <= moveDuration)
         {
             elapsedTime += Time.deltaTime;
             changer=false;
-            Debug.Log("TIme counter"+ elapsedTime);
+            // Debug.Log("TIme counter"+ elapsedTime);
         }
         else
         {

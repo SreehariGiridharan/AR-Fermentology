@@ -15,7 +15,7 @@ public class Cylinderbounder : MonoBehaviour
     private Vector3 cubePos;
     private Vector3 LocalPosition;
     public GameObject childObject;
-    public Rigidbody rb;
+    
     private void Start()
     {
         // rb = GetComponent<Rigidbody>();
@@ -39,19 +39,19 @@ public class Cylinderbounder : MonoBehaviour
         // Debug.Log( "Position of cube  "+ cubePos.x+"  "+cubePos.y+"  "+cubePos.z);
         // Debug.Log("Movement of cube  "+ transform.LocalPosition.x+"  " + transform.LocalPosition.y+"  " + transform.LocalPosition.z);
         
-       Transform childTransform = childObject.transform;
-         if (childTransform != null)
-        {
-            // Get the local position of the child object relative to its parent
-            LocalPosition = childTransform.localPosition;
+    //    Transform childTransform = childObject.transform;
+    //      if (childTransform != null)
+    //     {
+    //         // Get the local position of the child object relative to its parent
+    //         LocalPosition = childTransform.localPosition;
 
-            // Print the local position
-            Debug.Log("Local Position of Child Object: " + LocalPosition);
-        }
-        else
-        {
-            Debug.LogWarning("Child object not found.");
-        } 
+    //         // Print the local position
+    //         Debug.Log("Local Position of Child Object: " + LocalPosition);
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning("Child object not found.");
+    //     } 
        
 
         Debug.Log("X"+(LocalPosition.x-cubePos.x));
@@ -60,7 +60,7 @@ public class Cylinderbounder : MonoBehaviour
         Debug.Log("Radius limit"+ cylinderRadius*cylinderRadius);
 
         
-        if (((LocalPosition.x*LocalPosition.x)+(LocalPosition.z+cubePos.z*LocalPosition.z+cubePos.z)) < cylinderRadius*cylinderRadius)
+        if (((transform.localPosition.x*transform.localPosition.x)+(transform.localPosition.z+cubePos.z*transform.localPosition.z+cubePos.z)) < cylinderRadius*cylinderRadius)
         {
             if (changer)
             {
@@ -86,7 +86,7 @@ public class Cylinderbounder : MonoBehaviour
         //         Debug.Log("angle changed");
         //     }
         // }
-        rb.MovePosition(transform.position + transform.right * moveSpeed * Time.deltaTime);
+         transform.position +=transform.right * moveSpeed * Time.deltaTime;
 
         
         if (elapsedTime <= moveDuration)

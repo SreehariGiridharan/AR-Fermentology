@@ -15,7 +15,7 @@ public class AttractAndAttach : MonoBehaviour
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
-    private enum PairState { Aligning, Attracting, StopMovement, Attaching, Spawning }; // States for each pair
+    private enum PairState { Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
     private PairState[] pairStates; // Array to track the state of each pair
 
     private int currentPairIndex = 0; // Index of the current pair being processed
@@ -63,18 +63,25 @@ public class AttractAndAttach : MonoBehaviour
                 }
                 else
                 {
-                    // All pairs processed, reset to the first pair
-                    currentPairIndex = 0;
-                    StartPairState(currentPairIndex, PairState.Aligning);
-                    Debug.Log("finished");
+                    // All pairs processed, move to Rest state
+                    Debug.Log("0");
+                    currentPairIndex = currentPairIndex - 1;
+                    StartPairState(currentPairIndex, PairState.Rest);
                 }
+                break;
+            case PairState.Rest:
+                // No action needed, just stay idle
+                Debug.Log("finished");
                 break;
         }
     }
 
     private void StartPairState(int pairIndex, PairState state)
     {
-        pairStates[pairIndex] = state;
+        if (pairIndex >= 0 && pairIndex < pairStates.Length)
+        {
+            pairStates[pairIndex] = state;
+        }
     }
 
     private void RotateObject1TowardsObject2(Transform object1, Transform object2)
@@ -87,15 +94,16 @@ public class AttractAndAttach : MonoBehaviour
     private bool IsObject1AlignedWithObject2(Transform object1, Transform object2)
     {
         Vector3 direction = object2.position - object1.position;
-        float angle = Vector3.Angle(object1.right, direction);
-        return Mathf.Approximately(angle, 90f);
+        float angle = Vector3.Angle(object1.forward, direction);
+        return Mathf.Approximately(angle, 0f);
     }
 
     private void AttractObjects(Transform object1, Transform object2)
     {
-        Vector3 direction = object1.position - object2.position;
-        object1.GetComponent<Rigidbody>().AddForce(-direction.normalized * attractionForce * Time.fixedDeltaTime);
-        object2.GetComponent<Rigidbody>().AddForce(direction.normalized * attractionForce * Time.fixedDeltaTime);
+        Vector3 direction = object2.position - object1.position;
+        float step = attractionForce * Time.fixedDeltaTime;
+        object1.position = Vector3.MoveTowards(object1.position, object2.position, step);
+        object2.position = Vector3.MoveTowards(object2.position, object1.position, step);
     }
 
     private bool AreObjectsCloseEnough(Transform object1, Transform object2)
@@ -106,8 +114,7 @@ public class AttractAndAttach : MonoBehaviour
 
     private void StopMovement(Transform object1, Transform object2)
     {
-        object1.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        object2.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        // No action needed since we aren't using Rigidbody for movement
     }
 
     private void AttachObjects(Transform object1, Transform object2)
@@ -119,6 +126,25 @@ public class AttractAndAttach : MonoBehaviour
 
     private void SpawnNewObject(Transform spawnPosition)
     {
-        Instantiate(spawnPrefab, spawnPosition.position, Quaternion.identity);
+        Vector3 position = objectPairs[currentPairIndex].object1.transform.position;
+        Quaternion rotation = objectPairs[currentPairIndex].object1.transform.rotation;
+        if (transform.parent != null)
+        {
+            // Calculate the local position of the spawned object relative to the parent
+            Vector3 localPosition = transform.parent.InverseTransformPoint(position);
+            Quaternion localRotation = Quaternion.Inverse(transform.parent.rotation) * rotation;
+
+            // Spawn the object at the final position and rotation relative to the parent
+           GameObject newObject = Instantiate(spawnPrefab, transform.parent);
+            newObject.transform.localPosition = localPosition;
+            newObject.transform.localRotation = localRotation;
+        }
+        else
+        {
+            // Spawn the object at the final position and rotation
+            GameObject newObject = Instantiate(spawnPrefab, spawnPosition.position, spawnPosition.rotation);
+        }
+        // GameObject newObject = Instantiate(spawnPrefab, spawnPosition.position, spawnPosition.rotation);
+        // newObject.transform.localScale = spawnPosition.localScale; // Copy the scale
     }
 }
