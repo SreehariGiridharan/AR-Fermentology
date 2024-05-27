@@ -11,11 +11,11 @@ public class AttractAndAttach : MonoBehaviour
     }
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
-    public GameObject spawnPrefab; // Prefab to spawn
+    public GameObject spawnPrefab1,spawnPrefab2; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
-    private enum PairState { Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
+    private enum PairState { Scriptoff, Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
     private PairState[] pairStates; // Array to track the state of each pair
 
     private int currentPairIndex = 0; // Index of the current pair being processed
@@ -24,14 +24,18 @@ public class AttractAndAttach : MonoBehaviour
     {
         pairStates = new PairState[objectPairs.Count];
         // Start with the first pair
-        StartPairState(0, PairState.Aligning);
+        StartPairState(0, PairState.Scriptoff);
     }
 
     private void FixedUpdate()
     {
         switch (pairStates[currentPairIndex])
         {
-            case PairState.Aligning:
+            case PairState.Scriptoff:
+                ScriptDeactivater(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
+                StartPairState(currentPairIndex, PairState.Aligning);
+                break;
+            case PairState.Aligning:              
                 RotateObject1TowardsObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2))
                 {
@@ -51,6 +55,9 @@ public class AttractAndAttach : MonoBehaviour
                 break;
             case PairState.Attaching:
                 AttachObjects(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
+                string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
+                string childName2= "Yeast";
+                DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
                 StartPairState(currentPairIndex, PairState.Spawning);
                 break;
             case PairState.Spawning:
@@ -59,7 +66,7 @@ public class AttractAndAttach : MonoBehaviour
                 currentPairIndex++;
                 if (currentPairIndex < objectPairs.Count)
                 {
-                    StartPairState(currentPairIndex, PairState.Aligning);
+                    StartPairState(currentPairIndex, PairState.Scriptoff);
                 }
                 else
                 {
@@ -73,6 +80,20 @@ public class AttractAndAttach : MonoBehaviour
                 // No action needed, just stay idle
                 Debug.Log("finished");
                 break;
+        }
+    }
+    private void DeactivateChildByName(Transform parent, string childName, string childName2)
+    {
+        Transform child = parent.Find(childName);
+        Transform child2= parent.Find(childName2);
+        if (child != null && child2 != null)
+        {
+            child.gameObject.SetActive(true);
+            child2.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Child with name " + childName + " not found in " + parent.name);
         }
     }
 
@@ -135,16 +156,36 @@ public class AttractAndAttach : MonoBehaviour
             Quaternion localRotation = Quaternion.Inverse(transform.parent.rotation) * rotation;
 
             // Spawn the object at the final position and rotation relative to the parent
-           GameObject newObject = Instantiate(spawnPrefab, transform.parent);
+            GameObject newObject = Instantiate(spawnPrefab1, transform.parent);
+            GameObject newObject1 = Instantiate(spawnPrefab2, transform.parent);
+
             newObject.transform.localPosition = localPosition;
             newObject.transform.localRotation = localRotation;
+
+            newObject1.transform.localPosition = localPosition;
+            newObject1.transform.localRotation = localRotation;
         }
         else
         {
             // Spawn the object at the final position and rotation
-            GameObject newObject = Instantiate(spawnPrefab, spawnPosition.position, spawnPosition.rotation);
+            GameObject newObject = Instantiate(spawnPrefab1, spawnPosition.position, spawnPosition.rotation);
+            GameObject newObject1 = Instantiate(spawnPrefab2, spawnPosition.position, spawnPosition.rotation);
         }
-        // GameObject newObject = Instantiate(spawnPrefab, spawnPosition.position, spawnPosition.rotation);
-        // newObject.transform.localScale = spawnPosition.localScale; // Copy the scale
+    }
+
+    private void ScriptDeactivater(Transform object1, Transform object2)
+    {
+        MoveWithinCircle script1 = object1.GetComponent<MoveWithinCircle>();
+        MoveWithinCircle script2 = object2.GetComponent<MoveWithinCircle>();
+
+        if (script1 != null)
+        {
+            script1.enabled = false;
+        }
+
+        if (script2 != null)
+        {
+            script2.enabled = false;
+        }
     }
 }
