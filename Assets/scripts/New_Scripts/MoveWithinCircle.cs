@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveWithinCircle : MonoBehaviour
 {
-    public float moveSpeed = 1.0f; // Speed of movement
+    private float moveSpeed = 0.01f; // Speed of movement
     
     public float moveDuration = 5.0f; // Duration of movement in seconds
     private float elapsedTime = 0.0f; // Time elapsed since movement started

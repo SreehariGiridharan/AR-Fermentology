@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="qr_code_grayscale" size="0.068000 0.068000" />
+  </Tracking>
+</QCARConfig>
