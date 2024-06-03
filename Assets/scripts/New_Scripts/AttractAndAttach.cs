@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class AttractAndAttach : MonoBehaviour
@@ -11,7 +12,7 @@ public class AttractAndAttach : MonoBehaviour
     }
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
-    public GameObject spawnPrefab1,spawnPrefab2; // Prefab to spawn
+    public GameObject spawnPrefab1, spawnPrefab2; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
@@ -19,6 +20,16 @@ public class AttractAndAttach : MonoBehaviour
     private PairState[] pairStates; // Array to track the state of each pair
 
     private int currentPairIndex = 0; // Index of the current pair being processed
+    public Material newMaterial;
+    public Material newMaterial1;
+    public Material material1;
+    public Material material2;
+    public Material material3;
+    public float blinkInterval = 0.5f; // Time in seconds between blinks
+
+    private Renderer objectRenderer;
+    private bool isMaterial1Active = true;
+     private Coroutine blinkCoroutine;
 
     private void Start()
     {
@@ -34,14 +45,33 @@ public class AttractAndAttach : MonoBehaviour
             case PairState.Scriptoff:
                 ScriptDeactivater(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 StartPairState(currentPairIndex, PairState.Aligning);
+                string childName0 = "Yeast";
+                Transform child0 = objectPairs[currentPairIndex].object1.Find(childName0);
+                // Renderer renderer = child0.GetComponent<Renderer>();
+                // if (renderer != null)
+                // {
+                //     renderer.material = newMaterial;
+                // }
+
+                Renderer renderer1 = objectPairs[currentPairIndex].object2.GetComponent<Renderer>();
+                if (renderer1 != null)
+                {
+                    if (blinkCoroutine != null)
+                    {
+                        StopCoroutine(blinkCoroutine);
+                    }
+                    blinkCoroutine = StartCoroutine(BlinkMaterials(child0,objectPairs[currentPairIndex].object2));
+                }
                 break;
-            case PairState.Aligning:              
+
+            case PairState.Aligning:
                 RotateObject1TowardsObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2))
                 {
                     StartPairState(currentPairIndex, PairState.Attracting);
                 }
                 break;
+
             case PairState.Attracting:
                 AttractObjects(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 if (AreObjectsCloseEnough(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2))
@@ -49,17 +79,20 @@ public class AttractAndAttach : MonoBehaviour
                     StartPairState(currentPairIndex, PairState.StopMovement);
                 }
                 break;
+
             case PairState.StopMovement:
                 StopMovement(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 StartPairState(currentPairIndex, PairState.Attaching);
                 break;
+
             case PairState.Attaching:
                 AttachObjects(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
-                string childName2= "Yeast";
+                string childName2 = "Yeast";
                 DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
                 StartPairState(currentPairIndex, PairState.Spawning);
                 break;
+
             case PairState.Spawning:
                 SpawnNewObject(objectPairs[currentPairIndex].object1);
                 // Move to the next pair
@@ -76,16 +109,44 @@ public class AttractAndAttach : MonoBehaviour
                     StartPairState(currentPairIndex, PairState.Rest);
                 }
                 break;
+
             case PairState.Rest:
                 // No action needed, just stay idle
                 Debug.Log("finished");
                 break;
         }
     }
+
+    private IEnumerator BlinkMaterials(Transform obj, Transform obj2)
+    {
+        Renderer objRenderer1 = obj.GetComponent<Renderer>();
+        Renderer objRenderer2 = obj2.GetComponent<Renderer>();
+        while (true)
+        {
+            // Toggle the active material
+            if (isMaterial1Active)
+            {
+                objRenderer1.material = material2;
+                objRenderer2.material = material1;
+            }
+            else
+            {
+                objRenderer1.material = material3;
+                objRenderer2.material = material3;
+            }
+
+            // Flip the boolean flag
+            isMaterial1Active = !isMaterial1Active;
+
+            // Wait for the specified interval
+            yield return new WaitForSeconds(blinkInterval);
+        }
+    }
+
     private void DeactivateChildByName(Transform parent, string childName, string childName2)
     {
         Transform child = parent.Find(childName);
-        Transform child2= parent.Find(childName2);
+        Transform child2 = parent.Find(childName2);
         if (child != null && child2 != null)
         {
             child.gameObject.SetActive(true);
