@@ -5,7 +5,7 @@ public class Demo_attractor : MonoBehaviour
 {
     public Transform object1;
     public Transform object2;
-    public GameObject spawnPrefab1, spawnPrefab2, textObject; // Prefab to spawn
+    public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
@@ -24,6 +24,7 @@ public class Demo_attractor : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartAfterDelay(initialWaitTime));
+        
     }
 
     private void FixedUpdate()
@@ -82,9 +83,11 @@ public class Demo_attractor : MonoBehaviour
                 break;
 
             case PairState.Spawning:
-                SpawnNewObject(object1);
+                // SpawnNewObject(object1);
                 // Move to the Rest state
+                moving_distance.SetActive(true);
                 StartPairState(PairState.Rest);
+                
                 break;
 
             case PairState.Rest:
