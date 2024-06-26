@@ -5,7 +5,7 @@ public class Demo_attractor : MonoBehaviour
 {
     public Transform object1;
     public Transform object2;
-    public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance; // Prefab to spawn
+    public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance,YeastReaction,DemoReaction; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
@@ -92,6 +92,8 @@ public class Demo_attractor : MonoBehaviour
 
             case PairState.Rest:
                 // No action needed, just stay idle
+                // YeastReaction.SetActive(true);
+                // DemoReaction.SetActive(false);
                 Debug.Log("finished");
                 break;
         }

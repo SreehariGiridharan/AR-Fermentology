@@ -12,7 +12,7 @@ public class VuforiaCameraZoom : MonoBehaviour
     public float zoomDuration = 2.0f; // Duration for the zoom effect in seconds
     public Vector2 zoomLevel = new Vector2(2.0f, 2.0f); // Set your desired zoom level here (width, height)
     public Vector2 offset = Vector2.zero; // Set your desired offset here (x, y)
-    public GameObject reaction,magniText;
+    public GameObject reaction,magniText,Script1;
     
 
     private RenderTexture renderTexture;
@@ -114,11 +114,29 @@ public class VuforiaCameraZoom : MonoBehaviour
         }
         if (elapsedTime > zoomDuration)
         {
-            reaction.SetActive(true);
+            // reaction.SetActive(true);
+            DemoScriptOn();
             magniText.SetActive(false);
         }
 
         // Ensure the final size is exactly the target size
         SetRawImageSize(targetSize);
     }
+
+    public void DemoScriptOn()
+    {
+        // Access the Demo_attractor component on the targetObject
+        Demo_attractor exampleScript = Script1.GetComponent<Demo_attractor>();
+
+        if (exampleScript != null)
+        {
+            // Set the isActive boolean to true or false
+            exampleScript.enabled = true; // or false
+        }
+        else
+        {
+            Debug.LogError("Demo_attractor component not found on the target object.");
+        }
+    }
+
 }

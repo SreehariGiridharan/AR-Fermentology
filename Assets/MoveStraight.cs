@@ -6,6 +6,7 @@ public class MoveStraight : MonoBehaviour
 {
     public GameObject object1;
     public GameObject object2;
+    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction; // Reference to the Yeast_Reaction GameObject
 
     public float waitTime = 3f;
 
@@ -52,6 +53,7 @@ public class MoveStraight : MonoBehaviour
             StartCoroutine(WaitIdle(waitTime, () =>
             {
                 Object1.Invoke();
+                StartCoroutine(AnotherCoroutine(2f)); // Start another coroutine
             }));
         }
 
@@ -67,6 +69,7 @@ public class MoveStraight : MonoBehaviour
             StartCoroutine(WaitIdle(waitTime, () =>
             {
                 Object2.Invoke(); // Stop moving when the distance is reached
+                StartCoroutine(AnotherCoroutine(15f)); // Start another coroutine
             }));
         }
     }
@@ -79,5 +82,15 @@ public class MoveStraight : MonoBehaviour
         Debug.Log("Waiting ends at: " + Time.time);
         // Invoke the onComplete action
         onComplete?.Invoke();
+    }
+
+    private IEnumerator AnotherCoroutine(float waitTime)
+    {
+        Debug.Log("Another coroutine starts at: " + Time.time);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Another coroutine ends at: " + Time.time);
+        Yeast_Reaction.SetActive(true); // Deactivate the Yeast_Reaction GameObject
+        Demo_reaction.SetActive(false);
+        Real_reaction.SetActive(true);
     }
 }
