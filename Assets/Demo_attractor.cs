@@ -76,10 +76,7 @@ public class Demo_attractor : MonoBehaviour
 
             case PairState.Attaching:
                 AttachObjects(object1, object2);
-                string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
-                string childName2 = "Yeast";
-                DeactivateChildByName(object1, childName, childName2);
-                StartPairState(PairState.Spawning);
+                StartCoroutine(StartDelay(3f));
                 break;
 
             case PairState.Spawning:
@@ -233,5 +230,17 @@ public class Demo_attractor : MonoBehaviour
         {
             script2.enabled = false;
         }
+    }
+
+     private IEnumerator StartDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
+                string childName2 = "Yeast";
+                
+                DeactivateChildByName(object1, childName, childName2);
+                
+
+                StartPairState(PairState.Spawning);
     }
 }

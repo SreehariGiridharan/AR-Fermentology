@@ -6,9 +6,11 @@ public class MoveStraight : MonoBehaviour
 {
     public GameObject object1;
     public GameObject object2;
-    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction; // Reference to the Yeast_Reaction GameObject
+    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification; // Reference to the Yeast_Reaction GameObject
 
+    public float initialWaitTime = 2f; // Initial wait time before starting the script
     public float waitTime = 3f;
+    public float waitTimeForDemo = 10f;
 
     public UnityEvent Object1, Object2;
 
@@ -32,6 +34,14 @@ public class MoveStraight : MonoBehaviour
 
     void Start()
     {
+        // Start the initial coroutine to delay the script start
+        StartCoroutine(StartAfterDelay(initialWaitTime));
+    }
+
+    private IEnumerator StartAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        
         // Initialize starting positions
         startPosition1 = object1.transform.position;
         startPosition2 = object2.transform.position;
@@ -41,6 +51,8 @@ public class MoveStraight : MonoBehaviour
 
     void Update()
     {
+        if (startPosition1 == Vector3.zero || startPosition2 == Vector3.zero) return;
+
         // Move object1 if it's set to move
         if (isMoving1 && Vector3.Distance(startPosition1, object1.transform.position) < distance1)
         {
@@ -53,7 +65,7 @@ public class MoveStraight : MonoBehaviour
             StartCoroutine(WaitIdle(waitTime, () =>
             {
                 Object1.Invoke();
-                StartCoroutine(AnotherCoroutine(2f)); // Start another coroutine
+                StartCoroutine(AnotherCoroutine(waitTimeForDemo)); // Start another coroutine
             }));
         }
 
@@ -69,7 +81,7 @@ public class MoveStraight : MonoBehaviour
             StartCoroutine(WaitIdle(waitTime, () =>
             {
                 Object2.Invoke(); // Stop moving when the distance is reached
-                StartCoroutine(AnotherCoroutine(15f)); // Start another coroutine
+                StartCoroutine(AnotherCoroutine(waitTimeForDemo)); // Start another coroutine
             }));
         }
     }
@@ -87,9 +99,10 @@ public class MoveStraight : MonoBehaviour
     private IEnumerator AnotherCoroutine(float waitTime)
     {
         Debug.Log("Another coroutine starts at: " + Time.time);
+        Reaction_notification.SetActive(true);
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Another coroutine ends at: " + Time.time);
-        Yeast_Reaction.SetActive(true); // Deactivate the Yeast_Reaction GameObject
+        Yeast_Reaction.SetActive(true); // Activate the Yeast_Reaction GameObject
         Demo_reaction.SetActive(false);
         Real_reaction.SetActive(true);
     }
