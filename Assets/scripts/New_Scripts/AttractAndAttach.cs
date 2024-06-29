@@ -31,6 +31,8 @@ public class AttractAndAttach : MonoBehaviour
     private bool isMaterial1Active = true;
      private Coroutine blinkCoroutine;
 
+     private bool once;
+
     private void Start()
     {
         pairStates = new PairState[objectPairs.Count];
@@ -43,6 +45,7 @@ public class AttractAndAttach : MonoBehaviour
         switch (pairStates[currentPairIndex])
         {
             case PairState.Scriptoff:
+                once = true;
                 ScriptDeactivater(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 StartPairState(currentPairIndex, PairState.Aligning);
                 string childName0 = "Yeast";
@@ -87,14 +90,20 @@ public class AttractAndAttach : MonoBehaviour
 
             case PairState.Attaching:
                 AttachObjects(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
-                string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
-                string childName2 = "Yeast";
-                DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
-                StartPairState(currentPairIndex, PairState.Spawning);
+                // string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
+                // string childName2 = "Yeast";
+                // DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
+                // StartPairState(currentPairIndex, PairState.Spawning);
+                StartCoroutine(StartDelay(1f, currentPairIndex));
                 break;
 
             case PairState.Spawning:
+                
+                if(once)
+                {
                 SpawnNewObject(objectPairs[currentPairIndex].object1);
+                once=false;
+                }
                 // Move to the next pair
                 currentPairIndex++;
                 if (currentPairIndex < objectPairs.Count)
@@ -248,5 +257,14 @@ public class AttractAndAttach : MonoBehaviour
         {
             script2.enabled = false;
         }
+    }
+
+    private IEnumerator StartDelay(float delay, int currentPairIndex )
+    {
+        yield return new WaitForSeconds(delay);
+        string childName = "Reacted_yeast"; // Replace with the actual name of the child you want to deactivate
+        string childName2 = "Yeast";
+        DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
+        StartPairState(currentPairIndex, PairState.Spawning);
     }
 }
