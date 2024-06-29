@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveWithinCircle : MonoBehaviour
+public class MoveWithinCircle1 : MonoBehaviour
 {
     private float moveSpeed = 0.01f; // Speed of movement
     
@@ -54,8 +54,8 @@ public class MoveWithinCircle : MonoBehaviour
             if (changer)
             {
                 angleX=0.0f;
-                angleY=Random.Range(120.0f, 130.0f);
-                angleZ=0.0f;
+                angleY=0.0f;
+                angleZ=Random.Range(120.0f, 130.0f);
                 RotateAngle(angleX, angleY, angleZ);
                 changer=false;
                 elapsedTime = 0.0f;
@@ -76,7 +76,7 @@ public class MoveWithinCircle : MonoBehaviour
             }
         }
         
-        transform.position +=transform.forward * moveSpeed * Time.deltaTime;
+        transform.position +=transform.up * moveSpeed * Time.deltaTime;
 
         
         if (elapsedTime <= moveDuration)
