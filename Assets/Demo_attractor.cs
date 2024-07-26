@@ -128,7 +128,8 @@ public class Demo_attractor : MonoBehaviour
         }
     }
 
-    private void DeactivateChildByName(Transform parent, string childName, string childName2)
+    private void 
+    DeactivateChildByName(Transform parent, string childName, string childName2)
     {
         Transform child = parent.Find(childName);
         Transform child2 = parent.Find(childName2);
