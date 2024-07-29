@@ -12,12 +12,13 @@ public class AttractAndAttach : MonoBehaviour
     }
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
-    public GameObject spawnPrefab1, spawnPrefab2; // Prefab to spawn
+    public GameObject spawnPrefab1, spawnPrefab2, Water; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
     private enum PairState { Scriptoff, Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
     private PairState[] pairStates; // Array to track the state of each pair
+     private PairState currentState;
 
     private int currentPairIndex = 0; // Index of the current pair being processed
     public Material newMaterial;
@@ -27,14 +28,30 @@ public class AttractAndAttach : MonoBehaviour
     public Material material3;
     public float blinkInterval = 0.5f; // Time in seconds between blinks
 
+    public float initialWaitTime = 3.0f;
     private Renderer objectRenderer;
     private bool isMaterial1Active = true;
      private Coroutine blinkCoroutine;
 
      private bool once;
+     public Animator animator;
 
     private void Start()
     {
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+        StartCoroutine(StartAfterDelay(initialWaitTime));
+        
+    }
+
+     private IEnumerator StartAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        
+        Water.SetActive(false);
+        animator.Play("New Animation_reverse");
         pairStates = new PairState[objectPairs.Count];
         // Start with the first pair
         StartPairState(0, PairState.Scriptoff);
@@ -210,7 +227,7 @@ public class AttractAndAttach : MonoBehaviour
 
     private void AttachObjects(Transform object1, Transform object2)
     {
-        object2.parent = object1;
+        // object2.parent = object1;
         GameObject object2GameObject = object2.gameObject;
         object2GameObject.SetActive(false);
     }

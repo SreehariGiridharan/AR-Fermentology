@@ -6,7 +6,7 @@ public class MoveStraight : MonoBehaviour
 {
     public GameObject object1;
     public GameObject object2;
-    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification; // Reference to the Yeast_Reaction GameObject
+    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification,  Demo_reaction_button; // Reference to the Yeast_Reaction GameObject
 
     public float initialWaitTime = 2f; // Initial wait time before starting the script
     public float waitTime = 3f;
@@ -31,6 +31,12 @@ public class MoveStraight : MonoBehaviour
 
     private bool hasInvoked1 = false; // Flag to ensure event is invoked only once for object1
     private bool hasInvoked2 = false; // Flag to ensure event is invoked only once for object2
+
+    public GameObject complexPrefab;
+
+    // Position and rotation for spawning
+    public Vector3 spawnPosition;
+    public Quaternion spawnRotation;
 
     void Start()
     {
@@ -103,7 +109,14 @@ public class MoveStraight : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Another coroutine ends at: " + Time.time);
         Yeast_Reaction.SetActive(true); // Activate the Yeast_Reaction GameObject
+        
+        if (complexPrefab != null)
+        {
+            GameObject newObject = Instantiate(complexPrefab, spawnPosition, spawnRotation);
+
+        }
         Demo_reaction.SetActive(false);
         Real_reaction.SetActive(true);
+        Demo_reaction_button.SetActive(true);
     }
 }

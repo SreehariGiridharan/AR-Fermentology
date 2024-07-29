@@ -1,8 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class Demo_attractor : MonoBehaviour
 {
+    public GameObject targetYeast, targetCo2, targetTriangle, targetSugar;
+    public Transform YeastInitialPosition,Co2InitialPosition,TriangleInitialPosition,SugarInitialPosition;
+
+    public UnityEvent onRestart;
     public Transform object1;
     public Transform object2;
     public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance,YeastReaction,DemoReaction; // Prefab to spawn
@@ -21,6 +26,10 @@ public class Demo_attractor : MonoBehaviour
     private bool isMaterial1Active = true;
     private Coroutine blinkCoroutine;
 
+    private bool activationbool = false;
+
+
+
     private void Start()
     {
         StartCoroutine(StartAfterDelay(initialWaitTime));
@@ -37,7 +46,7 @@ public class Demo_attractor : MonoBehaviour
 
             case PairState.Scriptoff:
                 textObject.SetActive(false);
-                ScriptDeactivater(object1, object2);
+                ScriptDeactivater(object1, object2, activationbool);
                 StartPairState(PairState.Aligning);
                 string childName0 = "Yeast";
                 Transform child0 = object1.Find(childName0);
@@ -184,7 +193,6 @@ public class Demo_attractor : MonoBehaviour
 
     private void AttachObjects(Transform object1, Transform object2)
     {
-        object2.parent = object1;
         GameObject object2GameObject = object2.gameObject;
         object2GameObject.SetActive(false);
     }
@@ -217,19 +225,19 @@ public class Demo_attractor : MonoBehaviour
         }
     }
 
-    private void ScriptDeactivater(Transform object1, Transform object2)
+    private void ScriptDeactivater(Transform object1, Transform object2, bool activationbool)
     {
         MoveWithinCircle script1 = object1.GetComponent<MoveWithinCircle>();
         MoveWithinCircle script2 = object2.GetComponent<MoveWithinCircle>();
 
         if (script1 != null)
         {
-            script1.enabled = false;
+            script1.enabled = activationbool;
         }
 
         if (script2 != null)
         {
-            script2.enabled = false;
+            script2.enabled = activationbool;
         }
     }
 
@@ -243,5 +251,45 @@ public class Demo_attractor : MonoBehaviour
                 
 
                 StartPairState(PairState.Spawning);
+    }
+
+    public void Restarting()
+    {
+        YeastReaction.SetActive(false);
+        DemoReaction.SetActive(true);
+         onRestart.Invoke();
+        moving_distance.SetActive(false);
+        targetYeast.transform.position = YeastInitialPosition.position;
+        targetCo2.transform.position = Co2InitialPosition.position;
+        targetTriangle.transform.position = TriangleInitialPosition.position;
+        targetSugar.transform.position = SugarInitialPosition.position;
+        targetCo2.SetActive(false);
+        targetTriangle.SetActive(false);
+        
+        GameObject targetReactionDemo = object1.gameObject;
+        targetReactionDemo.SetActive(true);
+
+        
+        MoveWithinCircle script3 = targetTriangle.GetComponent<MoveWithinCircle>();
+        MoveWithinCircle script4 = targetYeast.GetComponent<MoveWithinCircle>();
+
+        if (script3 != null)
+        {
+            script3.enabled = false;
+        }
+
+        if (script4 != null)
+        {
+            script4.enabled =false;
+        }
+        if (onRestart != null)
+        {
+           
+        }
+        
+       
+        StartPairState(PairState.Waiting);
+
+
     }
 }
