@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Demo_attractor : MonoBehaviour
 {
-    public GameObject targetYeast, targetReactedYeast, targetCo2, targetTriangle, targetSugar;
+    public GameObject targetYeast, targetReactedYeast, targetCo2, targetTriangle, targetSugar,NormalYeastMaterial;
     public Vector3 YeastInitialPosition,ReactedYeastInitialPosition, Co2InitialPosition,TriangleInitialPosition,SugarInitialPosition;
 
     public Vector3 ReactedYeastRotation, TriangleRotation, Co2Rotation;
@@ -27,6 +27,7 @@ public class Demo_attractor : MonoBehaviour
     public float initialWaitTime = 2.0f; // Time to wait before starting the Scriptoff state
 
     private bool isMaterial1Active = true;
+    private bool blinkingStart=true;
     private Coroutine blinkCoroutine;
 
     private bool activationbool = false;
@@ -123,7 +124,8 @@ public class Demo_attractor : MonoBehaviour
     {
         Renderer objRenderer1 = obj.GetComponent<Renderer>();
         Renderer objRenderer2 = obj2.GetComponent<Renderer>();
-        while (true)
+        blinkingStart=true;
+        while (blinkingStart)
         {
             // Toggle the active material
             if (isMaterial1Active)
@@ -143,6 +145,7 @@ public class Demo_attractor : MonoBehaviour
             // Wait for the specified interval
             yield return new WaitForSeconds(blinkInterval);
         }
+        
     }
 
     private void 
@@ -267,8 +270,15 @@ public class Demo_attractor : MonoBehaviour
         
         YeastReaction.SetActive(false);
         DemoReaction.SetActive(true);
+
         
          onRestart.Invoke();
+
+        Renderer objRenderer1 = NormalYeastMaterial.GetComponent<Renderer>();
+        Renderer objRenderer2 = targetSugar.GetComponent<Renderer>();
+        objRenderer1.material = material2;
+        objRenderer2.material = material1;
+        
         
         targetYeast.transform.localPosition = YeastInitialPosition;
 
