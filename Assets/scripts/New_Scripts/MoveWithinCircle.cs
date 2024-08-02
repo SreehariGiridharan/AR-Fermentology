@@ -32,9 +32,9 @@ public class MoveWithinCircle : MonoBehaviour
        
         // Move the object in that direction
         // Debug.Log(Vector3.Distance(transform.position, circleCenter.position));
-        Debug.Log( "Length  height breadth   "+ cubeLength+"  " + cubeHeight+"  " + cubeBreadth);
-        Debug.Log( "Position of cube  "+ cubePos.x+"  "+cubePos.y+"  "+cubePos.z);
-        Debug.Log("Movement of cube  "+ transform.localPosition.x+"  " + transform.localPosition.y+"  " + transform.localPosition.z);
+        // Debug.Log( "Length  height breadth   "+ cubeLength+"  " + cubeHeight+"  " + cubeBreadth);
+        // Debug.Log( "Position of cube  "+ cubePos.x+"  "+cubePos.y+"  "+cubePos.z);
+        // Debug.Log("Movement of cube  "+ transform.localPosition.x+"  " + transform.localPosition.y+"  " + transform.localPosition.z);
         
         if (transform.localPosition.x > (cubePos.x+(cubeLength/2)) || transform.localPosition.x < (cubePos.x-(cubeLength/2)) )
         {

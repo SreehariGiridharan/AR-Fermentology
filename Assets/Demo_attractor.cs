@@ -4,13 +4,16 @@ using UnityEngine.Events;
 
 public class Demo_attractor : MonoBehaviour
 {
-    public GameObject targetYeast, targetCo2, targetTriangle, targetSugar;
-    public Transform YeastInitialPosition,Co2InitialPosition,TriangleInitialPosition,SugarInitialPosition;
+    public GameObject targetYeast, targetReactedYeast, targetCo2, targetTriangle, targetSugar;
+    public Vector3 YeastInitialPosition,ReactedYeastInitialPosition, Co2InitialPosition,TriangleInitialPosition,SugarInitialPosition;
 
+    public Vector3 ReactedYeastRotation, TriangleRotation, Co2Rotation;
+   
     public UnityEvent onRestart;
     public Transform object1;
     public Transform object2;
-    public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance,YeastReaction,DemoReaction; // Prefab to spawn
+
+    public GameObject spawnPrefab1, spawnPrefab2, textObject,moving_distance,YeastReaction,DemoReaction,  ReactedYeastText; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
@@ -27,6 +30,7 @@ public class Demo_attractor : MonoBehaviour
     private Coroutine blinkCoroutine;
 
     private bool activationbool = false;
+    
 
 
 
@@ -42,6 +46,8 @@ public class Demo_attractor : MonoBehaviour
         {
             case PairState.Waiting:
                 // Do nothing, waiting for the delay to end
+                targetTriangle.SetActive(false);
+                targetCo2.SetActive(false);
                 break;
 
             case PairState.Scriptoff:
@@ -91,7 +97,9 @@ public class Demo_attractor : MonoBehaviour
             case PairState.Spawning:
                 // SpawnNewObject(object1);
                 // Move to the Rest state
-                moving_distance.SetActive(true);
+                MoveStraight script6 = moving_distance.GetComponent<MoveStraight>();
+                script6.enabled = true;
+                // moving_distance.SetActive(true);
                 StartPairState(PairState.Rest);
                 
                 break;
@@ -100,7 +108,7 @@ public class Demo_attractor : MonoBehaviour
                 // No action needed, just stay idle
                 // YeastReaction.SetActive(true);
                 // DemoReaction.SetActive(false);
-                Debug.Log("finished");
+                // Debug.Log("finished");
                 break;
         }
     }
@@ -145,11 +153,12 @@ public class Demo_attractor : MonoBehaviour
         if (child != null && child2 != null)
         {
             child.gameObject.SetActive(true);
+            ReactedYeastText.SetActive(true);
             child2.gameObject.SetActive(false);
         }
         else
         {
-            Debug.LogWarning("Child with name " + childName + " not found in " + parent.name);
+            // Debug.LogWarning("Child with name " + childName + " not found in " + parent.name);
         }
     }
 
@@ -255,39 +264,28 @@ public class Demo_attractor : MonoBehaviour
 
     public void Restarting()
     {
+        
         YeastReaction.SetActive(false);
         DemoReaction.SetActive(true);
+        
          onRestart.Invoke();
-        moving_distance.SetActive(false);
-        targetYeast.transform.position = YeastInitialPosition.position;
-        targetCo2.transform.position = Co2InitialPosition.position;
-        targetTriangle.transform.position = TriangleInitialPosition.position;
-        targetSugar.transform.position = SugarInitialPosition.position;
-        targetCo2.SetActive(false);
-        targetTriangle.SetActive(false);
         
-        GameObject targetReactionDemo = object1.gameObject;
-        targetReactionDemo.SetActive(true);
+        targetYeast.transform.localPosition = YeastInitialPosition;
 
+        targetReactedYeast.transform.localPosition = ReactedYeastInitialPosition;
+        targetReactedYeast.transform.localEulerAngles = ReactedYeastRotation;
+
+        targetCo2.transform.localPosition = Co2InitialPosition;
+        targetCo2.transform.localEulerAngles = Co2Rotation;
+
+        targetTriangle.transform.localPosition = TriangleInitialPosition;
+        targetTriangle.transform.localEulerAngles = TriangleRotation;
+
+        targetSugar.transform.localPosition= SugarInitialPosition;
+        MoveStraight script6 = moving_distance.GetComponent<MoveStraight>();
         
-        MoveWithinCircle script3 = targetTriangle.GetComponent<MoveWithinCircle>();
-        MoveWithinCircle script4 = targetYeast.GetComponent<MoveWithinCircle>();
-
-        if (script3 != null)
-        {
-            script3.enabled = false;
-        }
-
-        if (script4 != null)
-        {
-            script4.enabled =false;
-        }
-        if (onRestart != null)
-        {
-           
-        }
-        
-       
+        script6.enabled = false;
+        StartCoroutine(StartAfterDelay(initialWaitTime));
         StartPairState(PairState.Waiting);
 
 
