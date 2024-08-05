@@ -14,6 +14,12 @@ public class Notification : MonoBehaviour
         StartCoroutine(PlayAnimations());
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(PlayAnimations());
+
+    }
+
     private IEnumerator PlayAnimations()
     {
         // Play the first animation

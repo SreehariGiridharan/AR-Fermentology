@@ -16,6 +16,8 @@ public class AttractAndAttach : MonoBehaviour
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
+    public float targetAngle2=30.0f;
+
     private enum PairState { Scriptoff, Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
     private PairState[] pairStates; // Array to track the state of each pair
      private PairState currentState;
@@ -85,7 +87,7 @@ public class AttractAndAttach : MonoBehaviour
                 break;
 
             case PairState.Aligning:
-                RotateObject1TowardsObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
+                RotateObject1TowardsObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2, targetAngle2);
                 if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2))
                 {
                     StartPairState(currentPairIndex, PairState.Attracting);
@@ -192,11 +194,14 @@ public class AttractAndAttach : MonoBehaviour
         }
     }
 
-    private void RotateObject1TowardsObject2(Transform object1, Transform object2)
+    private void RotateObject1TowardsObject2(Transform object1, Transform object2, float targetAngle2)
     {
         Vector3 direction = object2.position - object1.position;
-        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
         object1.rotation = Quaternion.RotateTowards(object1.rotation, targetRotation, Time.fixedDeltaTime * 100f);
+
+        Quaternion targetRotation2 = Quaternion.Euler(0, targetAngle2, 0);
+        object2.rotation = Quaternion.RotateTowards(object2.rotation, targetRotation2, Time.fixedDeltaTime * 100f);
     }
 
     private bool IsObject1AlignedWithObject2(Transform object1, Transform object2)

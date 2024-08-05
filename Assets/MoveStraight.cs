@@ -8,7 +8,7 @@ public class MoveStraight : MonoBehaviour
     public GameObject object2;
     public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification, Demo_reaction_button;
 
-    public GameObject TriangleText,Co2Text, ProgressBar;
+    public GameObject TriangleText,Co2Text, ProgressBar,DemoNotification,NextReactionNotification, swapButton;
 
     public float initialWaitTime = 2f;
     public float waitTime = 3f;
@@ -128,5 +128,8 @@ public class MoveStraight : MonoBehaviour
         Demo_reaction.SetActive(false);
         Real_reaction.SetActive(true);
         Demo_reaction_button.SetActive(true);
+        DemoNotification.SetActive(false);
+        NextReactionNotification.SetActive(false);
+        swapButton.SetActive(false);
     }
 }
