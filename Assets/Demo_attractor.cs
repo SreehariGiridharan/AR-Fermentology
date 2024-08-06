@@ -272,7 +272,7 @@ public class Demo_attractor : MonoBehaviour
         DemoReaction.SetActive(true);
 
         
-         onRestart.Invoke();
+        onRestart.Invoke();
 
         Renderer objRenderer1 = NormalYeastMaterial.GetComponent<Renderer>();
         Renderer objRenderer2 = targetSugar.GetComponent<Renderer>();

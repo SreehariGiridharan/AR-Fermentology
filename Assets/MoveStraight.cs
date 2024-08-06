@@ -6,7 +6,7 @@ public class MoveStraight : MonoBehaviour
 {
     public GameObject object1;
     public GameObject object2;
-    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification, Demo_reaction_button;
+    public GameObject Yeast_Reaction, Demo_reaction, Real_reaction, Reaction_notification, Demo_reaction_button, Demo_reaction_button_Duplicate;
 
     public GameObject TriangleText,Co2Text, ProgressBar,DemoNotification,NextReactionNotification, swapButton;
 
@@ -126,8 +126,8 @@ public class MoveStraight : MonoBehaviour
         ProgressBar.SetActive(false);
         Yeast_Reaction.SetActive(true);
         Demo_reaction.SetActive(false);
-        Real_reaction.SetActive(true);
         Demo_reaction_button.SetActive(true);
+        Demo_reaction_button_Duplicate.SetActive(false);
         DemoNotification.SetActive(false);
         NextReactionNotification.SetActive(false);
         swapButton.SetActive(false);

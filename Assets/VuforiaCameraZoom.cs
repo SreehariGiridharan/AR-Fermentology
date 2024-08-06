@@ -12,7 +12,7 @@ public class VuforiaCameraZoom : MonoBehaviour
     public float zoomDuration = 2.0f; // Duration for the zoom effect in seconds
     public Vector2 zoomLevel = new Vector2(2.0f, 2.0f); // Set your desired zoom level here (width, height)
     public Vector2 offset = Vector2.zero; // Set your desired offset here (x, y)
-    public GameObject reaction,magniText,Script1,Demo_reaction_container,Yeast_Reaction;
+    public GameObject magniText,Script1,Demo_reaction_container,Yeast_Reaction,H20Notification,Attractor,H20List,DemoReactionButton, DemoReactionButtonDuplicate;
     
 
     private RenderTexture renderTexture;
@@ -116,9 +116,9 @@ public class VuforiaCameraZoom : MonoBehaviour
         {
             // reaction.SetActive(true);
             Yeast_Reaction.SetActive(true);
-            // Demo_reaction_active();
-            
+            // Demo_reaction_active(); 
             magniText.SetActive(false);
+            StartButtonReaction();
         }
 
         // Ensure the final size is exactly the target size
@@ -145,6 +145,14 @@ public class VuforiaCameraZoom : MonoBehaviour
         {
             Debug.LogError("Demo_attractor component not found on the target object.");
         }
+    }
+    public void StartButtonReaction()
+    {
+        
+        AttractAndAttach newscript = Attractor.GetComponent<AttractAndAttach>();
+        newscript.enabled = true;
+        H20List.SetActive(true);
+        
     }
 
 }

@@ -12,11 +12,11 @@ public class AttractAndAttach : MonoBehaviour
     }
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
-    public GameObject spawnPrefab1, spawnPrefab2, Water; // Prefab to spawn
+    public GameObject spawnPrefab1, spawnPrefab2, Water,H20Notification,DemoReactionButton,DemoReactionButtonDuplicate; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
 
-    public float targetAngle2=30.0f;
+    public float targetAngle2=0.0f;
 
     private enum PairState { Scriptoff, Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
     private PairState[] pairStates; // Array to track the state of each pair
@@ -37,6 +37,8 @@ public class AttractAndAttach : MonoBehaviour
 
      private bool once;
      public Animator animator;
+     public float rotationSpeed = 100f;
+     public Vector3 alignmentAxis = Vector3.up;
 
     private void Start()
     {
@@ -53,6 +55,10 @@ public class AttractAndAttach : MonoBehaviour
         yield return new WaitForSeconds(delay);
         
         Water.SetActive(false);
+        H20Notification.SetActive(true);
+        yield return new WaitForSeconds(5.0f);
+        DemoReactionButton.SetActive(true);
+        DemoReactionButtonDuplicate.SetActive(false);
         animator.Play("New Animation_reverse");
         pairStates = new PairState[objectPairs.Count];
         // Start with the first pair
@@ -87,8 +93,9 @@ public class AttractAndAttach : MonoBehaviour
                 break;
 
             case PairState.Aligning:
+
                 RotateObject1TowardsObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2, targetAngle2);
-                if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2))
+                if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2,targetAngle2))
                 {
                     StartPairState(currentPairIndex, PairState.Attracting);
                 }
@@ -198,19 +205,22 @@ public class AttractAndAttach : MonoBehaviour
     {
         Vector3 direction = object2.position - object1.position;
         Quaternion targetRotation = Quaternion.LookRotation(direction);
-        object1.rotation = Quaternion.RotateTowards(object1.rotation, targetRotation, Time.fixedDeltaTime * 100f);
+        object1.rotation = Quaternion.RotateTowards(object1.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
         Quaternion targetRotation2 = Quaternion.Euler(0, targetAngle2, 0);
-        object2.rotation = Quaternion.RotateTowards(object2.rotation, targetRotation2, Time.fixedDeltaTime * 100f);
+        object2.rotation = Quaternion.RotateTowards(object2.rotation, targetRotation2, Time.deltaTime * rotationSpeed);
     }
 
-    private bool IsObject1AlignedWithObject2(Transform object1, Transform object2)
+    private bool IsObject1AlignedWithObject2(Transform object1, Transform object2, float targetAngle2)
     {
         Vector3 direction = object2.position - object1.position;
         float angle = Vector3.Angle(object1.forward, direction);
-        return Mathf.Approximately(angle, 0f);
-    }
 
+        Quaternion targetRotation2 = Quaternion.Euler(0, targetAngle2, 0);
+        float rotationDifference = Quaternion.Angle(object2.rotation, targetRotation2);
+
+        return (Mathf.Approximately(angle, 0f) && Mathf.Approximately(rotationDifference, 0f));
+    }
     private void AttractObjects(Transform object1, Transform object2)
     {
         Vector3 direction = object2.position - object1.position;
