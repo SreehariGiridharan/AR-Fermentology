@@ -18,16 +18,17 @@ public class MoveWithinCircle : MonoBehaviour
     private void Start()
     {
 
+        
+    }
+
+    private void Update()
+    {
         Vector3 cubeScale = cubeObject.transform.localScale;
         cubePos = cubeObject.transform.localPosition;
         // Calculate the radius and height of the cube
         cubeLength = cubeScale.x;
         cubeHeight = cubeScale.y;
         cubeBreadth = cubeScale.z;
-    }
-
-    private void Update()
-    {
         // Calculate direction towards the circle center
        
         // Move the object in that direction

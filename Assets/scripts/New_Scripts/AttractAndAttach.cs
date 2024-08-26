@@ -36,7 +36,7 @@ public class AttractAndAttach : MonoBehaviour
      private Coroutine blinkCoroutine;
 
      private bool once;
-     public Animator animator;
+     public Animator animator, animator1;
      public float rotationSpeed = 100f;
      public Vector3 alignmentAxis = Vector3.up;
 
@@ -128,6 +128,10 @@ public class AttractAndAttach : MonoBehaviour
                 if(once)
                 {
                 SpawnNewObject(objectPairs[currentPairIndex].object1);
+                if (animator1 != null)
+                {
+                    animator1.Play("Height_increasing"); // Replace "AnimationName" with your animation's name
+                }
                 once=false;
                 }
                 // Move to the next pair
