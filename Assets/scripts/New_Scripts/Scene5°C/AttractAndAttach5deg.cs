@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class AttractAndAttach : MonoBehaviour
+public class AttractAndAttach5deg : MonoBehaviour
 {
     [System.Serializable]
     public class ObjectPair
@@ -43,6 +43,7 @@ public class AttractAndAttach : MonoBehaviour
 
     private void Start()
     {
+        Water.SetActive(false);
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -55,8 +56,8 @@ public class AttractAndAttach : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         
-        Water.SetActive(false);
-        H20Notification.SetActive(true);
+        
+        // H20Notification.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         DemoReactionButton.SetActive(true);
         DemoReactionButtonDuplicate.SetActive(false);
