@@ -4,16 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public Dropdown sceneDropdown; // Reference to the Dropdown component
-
-    void Start()
-    {
-        sceneDropdown.value = 1;
-        // Add a listener to call the OnDropdownValueChanged method whenever the dropdown value changes
-        sceneDropdown.onValueChanged.AddListener(OnDropdownValueChanged);
-    }
-
-    // This method is called whenever the dropdown value changes
     void OnDropdownValueChanged(int index)
     {
         switch (index)

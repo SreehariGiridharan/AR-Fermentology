@@ -6,7 +6,8 @@ public class start_animation : MonoBehaviour
 {
 
     private Animator animator;
-    // Start is called before the first frame update
+    public string Animation ="Menu_in";
+     // Start is called before the first frame update
     void Start()
     {
        // Get the Animator component attached to the GameObject
@@ -15,7 +16,7 @@ public class start_animation : MonoBehaviour
         // Play the default animation from the Animator
         if (animator != null)
         {
-            animator.Play("Help_button_out"); // Replace "AnimationName" with your animation's name
+            animator.Play(Animation); // Replace "AnimationName" with your animation's name
         }  
     }
 

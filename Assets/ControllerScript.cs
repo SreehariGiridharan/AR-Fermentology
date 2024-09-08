@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ControllerScript : MonoBehaviour
 {
-    public GameObject targetObject2,magnifyerGlass,DemoReaction; // Assign the GameObject in the Inspector
+    public GameObject targetObject2,magnifyerGlass; 
 
     
     public void ZoomScriptOn()
@@ -12,8 +12,8 @@ public class ControllerScript : MonoBehaviour
 
         if (exampleScript2 != null)
         {
-            // Set the isActive boolean to true or false
-            exampleScript2.enabled = true; // or false
+            
+            exampleScript2.enabled = true; 
         }
         else
         {
@@ -25,17 +25,4 @@ public class ControllerScript : MonoBehaviour
        magnifyerGlass.SetActive(false); 
     }
 
-    // public void DemoReactionAnimation()
-    // {
-    //   Notification exampleScript3 = DemoReaction.GetComponent<Notification>();
-    //   if (exampleScript3 != null)
-    //     {
-    //         // Set the isActive boolean to true or false
-    //         exampleScript3.enabled = true; // or false
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("VuforiaCameraZoom component not found on the target object.");
-    //     }
-    // }
 }

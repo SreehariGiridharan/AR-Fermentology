@@ -7,7 +7,6 @@ public class ActivatorScript : MonoBehaviour
     public void Started_gameobject()
     {
        targetObject.SetActive (true);
-    //    Demo_reaction_container.SetActive (true);
 
     }
 }
