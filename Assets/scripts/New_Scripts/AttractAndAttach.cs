@@ -40,13 +40,15 @@ public class AttractAndAttach : MonoBehaviour
      public Animator animator, animator1;
      public float rotationSpeed = 100f;
      public Vector3 alignmentAxis = Vector3.up;
+     public bool H20NotificationBool = true;
+     public float DelayAfterH20Disappearance=5.0f;
 
     private void Start()
     {
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
+        // if (animator == null)
+        // {
+        //     animator = GetComponent<Animator>();
+        // }
         StartCoroutine(StartAfterDelay(initialWaitTime));
         
     }
@@ -56,11 +58,18 @@ public class AttractAndAttach : MonoBehaviour
         yield return new WaitForSeconds(delay);
         
         Water.SetActive(false);
-        H20Notification.SetActive(true);
-        yield return new WaitForSeconds(5.0f);
+        if(H20NotificationBool)
+        {
+            H20Notification.SetActive(true);
+        }
+        else
+        {
+            H20Notification.SetActive(false);
+        }
+        yield return new WaitForSeconds(DelayAfterH20Disappearance);
         DemoReactionButton.SetActive(true);
         DemoReactionButtonDuplicate.SetActive(false);
-        animator.Play("New Animation_reverse");
+        // animator.Play("New Animation_reverse");
         pairStates = new PairState[objectPairs.Count];
         // Start with the first pair
         StartPairState(0, PairState.Scriptoff);
@@ -83,6 +92,7 @@ public class AttractAndAttach : MonoBehaviour
                 // }
 
                 Renderer renderer1 = objectPairs[currentPairIndex].object2.GetComponent<Renderer>();
+                Debug.Log("0");
                 if (renderer1 != null)
                 {
                     if (blinkCoroutine != null)
@@ -99,6 +109,7 @@ public class AttractAndAttach : MonoBehaviour
                 if (IsObject1AlignedWithObject2(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2,targetAngle2))
                 {
                     StartPairState(currentPairIndex, PairState.Attracting);
+                    Debug.Log("1");
                 }
                 break;
 

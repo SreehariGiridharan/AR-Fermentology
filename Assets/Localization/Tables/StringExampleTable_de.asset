@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringExampleTable_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: af60d245af54d274586064f8357d908a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 6519001379130310666
+  m_TableData:
+  - m_Id: 41039519744
+    m_Localized: "Willkommen in der AR-Lernumgebung f\xFCr das Hefe-Reaktions-Experiment.
+      Folgen Sie den Anweisungen Ihres Kursleiters, um das Experiment durchzuf\xFChren.
+      Diese App begleitet Sie, indem sie die Teilchenprozesse w\xE4hrend des Experiments
+      visualisiert.\n\nDiese AR-Lernumgebung wurde an der Technischen Universit\xE4t
+      M\xFCnchen im Rahmen des DigiProMIN-Projekts unter der Leitung von Prof. Claudia
+      Nerdel und Dr. Melanie Ripsam entwickelt und von Sreehari Giridharan programmiert.Wenn
+      Sie Fragen oder technische Schwierigkeiten haben, wenden Sie sich bitte an\_melanie.ripsam@tum.de."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629294034673664
+    m_Localized: WILLKOMMEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631378989637632
+    m_Localized: SPRACHE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631500565733376
+    m_Localized: HILFE ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631542420692992
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632217108045824
+    m_Localized: VORSTELLUNG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731531994030080
+    m_Localized: "Die Reaktion folgt einer festgelegten Temperaturabfolge: beginnend
+      bei 5\xB0C, dann 35\xB0C und schlie\xDFlich 100\xB0C. Die Temperatur kann w\xE4hrend
+      des Prozesses nicht ge\xE4ndert werden. Ein Fortschrittsbalken, dargestellt
+      durch einen goldenen Ring um den Temperaturknopf (mit einem roten Knopf, der
+      die Temperatur anzeigt), zeigt die verbleibende Zeit f\xFCr jede Phase an.
+      Die tats\xE4chliche Reaktion muss ebenfalls dieser Abfolge folgen.\n\nEin Demo-Knopf
+      erm\xF6glicht es, die Reaktion eines einzelnen Molek\xFCls in Aktion zu sehen.\n\nUm
+      zu erfahren, was jedes Molek\xFCl repr\xE4sentiert, k\xF6nnen Sie im Legenden-Knopf
+      nachsehen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742227200794624
+    m_Localized: MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 745440842964992
+    m_Localized: "In dieser AR-App kann die Reaktion zwischen Hefe und Zucker visualisiert
+      werden, um zu zeigen, wie diese Komponenten Kohlendioxid produzieren. So funktioniert
+      es:\r\n\r\nWenn Hefe mit Zucker in Wasser gemischt wird, verbraucht die Hefe
+      den Zucker in einem Prozess, der Fermentation genannt wird. Dabei zerlegen
+      die Hefezellen den Zucker in Alkohol und Kohlendioxid. In einer AR-Umgebung
+      kann diese Reaktion verst\xE4rkt dargestellt werden, indem gezeigt wird, wie
+      Hefepartikel mit Zuckermolek\xFClen interagieren, was zur Freisetzung von Kohlendioxidbl\xE4schen
+      f\xFChrt. Diese. Visualisierung hilft den Nutzern zu verstehen, wie Hefe und
+      Zucker zusammenarbeiten, um dieses Gas zu erzeugen, und simuliert damit den
+      realen Fermentationsprozess."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 747311301222400
+    m_Localized: "Die Reaktion von Hefe und Zucker variiert je nach Temperatur: \n\n\n\n\n\n\n\n\n\n\nDies
+      hilft den Benutzern zu sehen, wie die Temperatur die Reaktion beeinflusst."
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 748190863548416
+    m_Localized: "5\xB0C (Kalt): Langsame Reaktion, minimale Kohlendioxidproduktion."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748389002469376
+    m_Localized: "35\xB0C (Raumtemperatur): Optimale Reaktion, maximale Kohlendioxidproduktion."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748617399099392
+    m_Localized: "100\xB0C (Siedetemperatur): Keine Reaktion, die Hefe ist inaktiv."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751833788538880
+    m_Localized: Temperaturauswirkungen
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 760401426210816
+    m_Localized: "H2O wurde f\xFCr bessere Sichtbarkeit entfernt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761902202707968
+    m_Localized: Demo Reaktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 762434237587456
+    m_Localized: Illustration der Grundreaktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768958813003776
+    m_Localized: "Jetzt k\xF6nnen Sie submikroskopische Partikel sehen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770723339919360
+    m_Localized: "Normale Reaktion l\xE4uft weiter"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780107956707328
+    m_Localized: Zucker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780151170621440
+    m_Localized: Hefe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780339817832448
+    m_Localized: Alkohol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781648683950080
+    m_Localized: Legenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781714563883008
+    m_Localized: "Demo\r\n Reaktion"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781880519909376
+    m_Localized: (Vor)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787109197996032
+    m_Localized: Kohlenstoffdioxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 789098514440192
+    m_Localized: (Nach)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3218946948161536
+    m_Localized: Hefe-Zucker-Reaktion in AR
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6519001379130310666
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0060a5f8aca702000060e5f1c9ab0200

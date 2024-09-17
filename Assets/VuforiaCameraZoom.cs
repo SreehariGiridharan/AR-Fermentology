@@ -13,7 +13,8 @@ public class VuforiaCameraZoom : MonoBehaviour
     public Vector2 zoomLevel = new Vector2(2.0f, 2.0f); // Set your desired zoom level here (width, height)
     public Vector2 offset = Vector2.zero; // Set your desired offset here (x, y)
     public GameObject magniText,Script1,Demo_reaction_container,Yeast_Reaction,H20Notification,Attractor,H20List,DemoReactionButton, DemoReactionButtonDuplicate;
-    
+    public bool H20ListBool = true;
+    public bool AttractionScriptBool = true;
 
     private RenderTexture renderTexture;
 
@@ -150,8 +151,17 @@ public class VuforiaCameraZoom : MonoBehaviour
     {
         
         AttractAndAttach newscript = Attractor.GetComponent<AttractAndAttach>();
-        newscript.enabled = true;
-        H20List.SetActive(true);
+        
+        if (AttractionScriptBool)
+        {
+            newscript.enabled = true;
+        }
+        
+        if (H20ListBool)
+        {
+            H20List.SetActive(true);
+        }
+        
         
     }
 

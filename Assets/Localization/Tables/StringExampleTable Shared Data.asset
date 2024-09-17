@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringExampleTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringExampleTable
+  m_TableCollectionNameGuidString: af60d245af54d274586064f8357d908a
+  m_Entries:
+  - m_Id: 41039519744
+    m_Key: welcomeTextPage1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629294034673664
+    m_Key: MenuTextWelcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631378989637632
+    m_Key: MenuTextLanguage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631500565733376
+    m_Key: MenuTextHelp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631542420692992
+    m_Key: MenuTextStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632217108045824
+    m_Key: MenuTextIntroduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731531994030080
+    m_Key: welcomeTextPage2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742227200794624
+    m_Key: menuText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 745440842964992
+    m_Key: helpTextPage1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 747311301222400
+    m_Key: helpTextPage2-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748190863548416
+    m_Key: helpTextPage2-2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748389002469376
+    m_Key: helpTextPage2-3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748617399099392
+    m_Key: helpTextPage2-4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751833788538880
+    m_Key: helpTextPage2-Heading
+    m_Metadata:
+      m_Items: []
+  - m_Id: 760401426210816
+    m_Key: H20Notification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761902202707968
+    m_Key: DemoNotification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 762434237587456
+    m_Key: DemoNotificationText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 768958813003776
+    m_Key: SubatomicNotification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 770723339919360
+    m_Key: NextReactionNotification
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780107956707328
+    m_Key: Suger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780151170621440
+    m_Key: Yeast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 780339817832448
+    m_Key: Alcohol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781648683950080
+    m_Key: Legends
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781714563883008
+    m_Key: "Demo\r\n Reaction"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 781880519909376
+    m_Key: Before
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787109197996032
+    m_Key: Carbon dioxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 789098514440192
+    m_Key: (After)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3218946948161536
+    m_Key: Help page heading
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6519001339892072472
+  references:
+    version: 2
+    RefIds:
+    - rid: 6519001339892072472
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1725815382481
