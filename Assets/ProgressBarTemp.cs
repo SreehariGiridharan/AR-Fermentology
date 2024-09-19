@@ -6,12 +6,31 @@ public class ProgressBarTemp : MonoBehaviour
 {
     public Image progressBar; // Reference to the Image component
     public float duration = 5f; // Duration in seconds for the progress bar to fill
+    public Button targetButton1, targetButton2, targetButton3; // Reference to the Button components
 
+    public GameObject ProcessIncompleteButton;
     private float elapsedTime = 0f; // Time elapsed since the progress started
     private Coroutine progressCoroutine;
 
+    public Animator animator; // Reference to the Animator component
+    public string animationName;
+
     void OnEnable()
     {
+        // Set both buttons to non-interactable at the start
+        if (targetButton1 != null)
+            targetButton1.interactable = false;
+
+        if (targetButton2 != null)
+            targetButton2.interactable = false;
+
+        if (targetButton3 != null)
+            targetButton3.interactable = false;
+
+        if (ProcessIncompleteButton != null)
+            ProcessIncompleteButton.SetActive(true);
+    
+
         // Ensure the fill amount is set to 0 at the start
         progressBar.fillAmount = 0f;
 
@@ -45,5 +64,39 @@ public class ProgressBarTemp : MonoBehaviour
 
         // Ensure the fill amount is set to 1 at the end
         progressBar.fillAmount = 1f;
+
+        // Call the event when progress is complete
+        OnProgressComplete();
+    }
+
+    // Event triggered when progress bar is filled
+    private void OnProgressComplete()
+    {
+        Debug.Log("Progress bar is filled!");
+
+         if (animator != null && !string.IsNullOrEmpty(animationName))
+        {
+            // Reset the animation state to the start
+            animator.Play(animationName, 0, 0f);
+        }
+
+        // Enable the buttons once the progress bar is fully filled
+        if (targetButton1 != null)
+        {
+            targetButton1.interactable = true;  // Enable the button
+        }
+
+        if (targetButton2 != null)
+        {
+            targetButton2.interactable = false;  // Enable the button
+        }
+        if (targetButton3 != null)
+        {
+            targetButton3.interactable = false;  // Enable the button
+        }
+        if (ProcessIncompleteButton != null)
+        {
+            ProcessIncompleteButton.SetActive(false);  // Disable the button
+        }
     }
 }
