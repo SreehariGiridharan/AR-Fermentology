@@ -16,7 +16,7 @@ public class AttractAndAttach : MonoBehaviour
     public GameObject spawnPrefab1, spawnPrefab2, Water,H20Notification,DemoReactionButton,DemoReactionButtonDuplicate; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
-
+    public float StartingDistance = 0.5f; // Distance threshold for starting the reaction
     public float targetAngle2=0.0f;
 
     private enum PairState { Scriptoff, Aligning, Attracting, StopMovement, Attaching, Spawning, Rest }; // States for each pair
@@ -42,6 +42,9 @@ public class AttractAndAttach : MonoBehaviour
      public Vector3 alignmentAxis = Vector3.up;
      public bool H20NotificationBool = true;
      public float DelayAfterH20Disappearance=5.0f;
+
+     public float timeLimit = 5f;  // Set a time limit for Scriptoff state
+    private float timeInScriptoff = 0f;  // Track how much time has passed in Scriptoff
 
     private void Start()
     {
@@ -80,28 +83,33 @@ public class AttractAndAttach : MonoBehaviour
         switch (pairStates[currentPairIndex])
         {
             case PairState.Scriptoff:
+            // Increment the time spent in this state
+            timeInScriptoff += Time.fixedDeltaTime;
+
+            // Check the distance and time limit
+            if (IsDistanceSufficient(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2) || timeInScriptoff >= timeLimit)
+            {
                 once = true;
                 ScriptDeactivater(objectPairs[currentPairIndex].object1, objectPairs[currentPairIndex].object2);
                 StartPairState(currentPairIndex, PairState.Aligning);
+                
+                // Reset time counter for the next pair
+                timeInScriptoff = 0f;
+
+                // Optional: Update materials or any other specific behavior for Scriptoff state
                 string childName0 = "Yeast";
                 Transform child0 = objectPairs[currentPairIndex].object1.Find(childName0);
-                // Renderer renderer = child0.GetComponent<Renderer>();
-                // if (renderer != null)
-                // {
-                //     renderer.material = newMaterial;
-                // }
-
                 Renderer renderer1 = objectPairs[currentPairIndex].object2.GetComponent<Renderer>();
-                Debug.Log("0");
                 if (renderer1 != null)
                 {
                     if (blinkCoroutine != null)
                     {
                         StopCoroutine(blinkCoroutine);
                     }
-                    blinkCoroutine = StartCoroutine(BlinkMaterials(child0,objectPairs[currentPairIndex].object2));
+                    blinkCoroutine = StartCoroutine(BlinkMaterials(child0, objectPairs[currentPairIndex].object2));
                 }
-                break;
+            }
+            break;
 
             case PairState.Aligning:
 
@@ -132,7 +140,7 @@ public class AttractAndAttach : MonoBehaviour
                 // string childName2 = "Yeast";
                 // DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
                 // StartPairState(currentPairIndex, PairState.Spawning);
-                StartCoroutine(StartDelay(1f, currentPairIndex));
+                StartCoroutine(StartDelay(0f, currentPairIndex));
                 break;
 
             case PairState.Spawning:
@@ -315,4 +323,12 @@ public class AttractAndAttach : MonoBehaviour
         DeactivateChildByName(objectPairs[currentPairIndex].object1, childName, childName2);
         StartPairState(currentPairIndex, PairState.Spawning);
     }
+
+    private bool IsDistanceSufficient(Transform object1, Transform object2)
+    {
+        float distance = Vector3.Distance(object1.position, object2.position);
+        Debug.Log("Distance"+ distance+ "StartingDistance"+ StartingDistance);
+        return distance >= StartingDistance; // Check if objects are within the threshold distance
+    }
+
 }

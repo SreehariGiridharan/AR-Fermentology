@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Key: welcomeTextPage2
+    m_Key: welcomeTextPage2.1
     m_Metadata:
       m_Items: []
   - m_Id: 742227200794624
@@ -129,6 +129,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3532882062958592
     m_Key: processincomplete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9692779506917376
+    m_Key: welcomeTextPage2.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10929327443369984
+    m_Key: helpTextPage1.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10932623373590528
+    m_Key: helpTextPagenewpage1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11132965956706304
+    m_Key: LOGO
     m_Metadata:
       m_Items: []
   m_Metadata:

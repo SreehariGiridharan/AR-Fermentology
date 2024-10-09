@@ -46,19 +46,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 632217108045824
-    m_Localized: VORSTELLUNG
+    m_Localized: "EINF\xDCHRUNG"
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "Die Reaktion folgt einer festgelegten Temperaturabfolge: beginnend
+    m_Localized: "Die Reaktion folgt einer festgelegten Temperatursequenz: Sie beginnt
       bei 5\xB0C, dann 35\xB0C und schlie\xDFlich 100\xB0C. Die Temperatur kann w\xE4hrend
-      des Prozesses nicht ge\xE4ndert werden. Ein Fortschrittsbalken, dargestellt
-      durch einen goldenen Ring um den Temperaturknopf (mit einem roten Knopf, der
-      die Temperatur anzeigt), zeigt die verbleibende Zeit f\xFCr jede Phase an.
-      Die tats\xE4chliche Reaktion muss ebenfalls dieser Abfolge folgen.\n\nEin Demo-Knopf
-      erm\xF6glicht es, die Reaktion eines einzelnen Molek\xFCls in Aktion zu sehen.\n\nUm
-      zu erfahren, was jedes Molek\xFCl repr\xE4sentiert, k\xF6nnen Sie im Legenden-Knopf
-      nachsehen."
+      des Prozesses nicht ver\xE4ndert werden.\r\n\r\n             \n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 742227200794624
@@ -66,18 +60,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: "In dieser AR-App kann die Reaktion zwischen Hefe und Zucker visualisiert
-      werden, um zu zeigen, wie diese Komponenten Kohlendioxid produzieren. So funktioniert
-      es:\r\n\r\nWenn Hefe mit Zucker in Wasser gemischt wird, verbraucht die Hefe
-      den Zucker in einem Prozess, der Fermentation genannt wird. Dabei zerlegen
-      die Hefezellen den Zucker in Alkohol und Kohlendioxid. In einer AR-Umgebung
-      kann diese Reaktion verst\xE4rkt dargestellt werden, indem gezeigt wird, wie
-      Hefepartikel mit Zuckermolek\xFClen interagieren, was zur Freisetzung von Kohlendioxidbl\xE4schen
-      f\xFChrt. Diese. Visualisierung hilft den Nutzern zu verstehen, wie Hefe und
-      Zucker zusammenarbeiten, um dieses Gas zu erzeugen, und simuliert damit den
-      realen Fermentationsprozess."
+    m_Localized: "In dieser AR-App kann der                                                                                                                                        
+      Fermentationsprozess, der die Reaktion zwischen Hefe und Zucker umfasst, auf
+      Teilchenebene mittels AR-Modellen        visualisiert werden.\r"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 747311301222400
     m_Localized: "Die Reaktion von Hefe und Zucker variiert je nach Temperatur: \n\n\n\n\n\n\n\n\n\n\nDies
       hilft den Benutzern zu sehen, wie die Temperatur die Reaktion beeinflusst."
@@ -118,9 +106,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 770723339919360
-    m_Localized: "Normale Reaktion l\xE4uft weiter"
+    m_Localized: "Zur\xFCck zur \xDCbersicht der Partikelprozesse"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 780107956707328
     m_Localized: Zucker
     m_Metadata:
@@ -161,10 +150,39 @@ MonoBehaviour:
     m_Localized: "Warten Prozess unvollst\xE4ndig"
     m_Metadata:
       m_Items: []
+  - m_Id: 9692779506917376
+    m_Localized: "            Das Symbol zeigt die aktuelle Temperatur (hier 5\xB0C)
+      und die verbleibende Zeit pro Phase an. Die Reaktion muss dieser Sequenz folgen.\r\n\r\nEin
+      Demo-Button zeigt eine Molek\xFClreaktion. \r\n\r\nDetails zu den Molek\xFClen
+      finden Sie \xFCber die Legende."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10929327443369984
+    m_Localized: "      Wie beeinflusst die Temperaturvariation das Experiment?\r\n\n    
+      Die Temperatur kann eine wesentliche Rolle bei der Beeinflussung des   Ergebnisses
+      des Experimentsspielen. Zum Beispiel k\xF6nnt Temperatur\xE4nderungen\nbeeinflussen,
+      wie schnell oder langsam die Reaktion abl\xE4uft.\r"
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 10932623373590528
+    m_Localized: "      Wenn die Temperatur die unabh\xE4ngige Variable ist, was
+      beeinflusst sie, und was ist die abh\xE4ngige Variable?\r\n\r\n     Wenn sich
+      die Temperatur \xE4ndert, kann das die Interaktion zwischen Hefe und Zucker
+      im Fermentationsprozess                                                      
+      beeinflussen. Das Ergebnis, das du misst, wie zum Beispiel die Geschwindigkeit
+      oder Effektivit\xE4t der Reaktion, wird je nach Temperatur variieren.\r\n"
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 11132965956706304
+    m_Localized: "\xA9 2024 TUM. Alle Rechte vorbehalten."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 6519001379130310666
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0060a5f8aca702000060e5f1c9ab0200
+        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc0200

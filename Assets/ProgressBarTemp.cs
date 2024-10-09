@@ -7,17 +7,18 @@ public class ProgressBarTemp : MonoBehaviour
     public Image progressBar; // Reference to the Image component
     public float duration = 5f; // Duration in seconds for the progress bar to fill
     public Button targetButton1, targetButton2, targetButton3; // Reference to the Button components
-
+    public Button pauseResumeButton;  // Button to pause/resume the progress
     public GameObject ProcessIncompleteButton;
     private float elapsedTime = 0f; // Time elapsed since the progress started
     private Coroutine progressCoroutine;
+    private bool isPaused = false; // To keep track of whether the process is paused or not
 
     public Animator animator; // Reference to the Animator component
     public string animationName;
 
     void OnEnable()
     {
-        // Set both buttons to non-interactable at the start
+        // Set buttons to non-interactable at the start
         if (targetButton1 != null)
             targetButton1.interactable = false;
 
@@ -29,7 +30,6 @@ public class ProgressBarTemp : MonoBehaviour
 
         if (ProcessIncompleteButton != null)
             ProcessIncompleteButton.SetActive(true);
-    
 
         // Ensure the fill amount is set to 0 at the start
         progressBar.fillAmount = 0f;
@@ -43,20 +43,30 @@ public class ProgressBarTemp : MonoBehaviour
             StopCoroutine(progressCoroutine);
         }
         progressCoroutine = StartCoroutine(FillProgressBar());
+
+        // Add listener to the pause/resume button
+        if (pauseResumeButton != null)
+        {
+            pauseResumeButton.onClick.AddListener(TogglePauseResume);
+        }
     }
 
     private IEnumerator FillProgressBar()
     {
         while (elapsedTime < duration)
         {
-            // Increment the elapsed time
-            elapsedTime += Time.deltaTime;
+            // If paused, stop the progress
+            if (!isPaused)
+            {
+                // Increment the elapsed time
+                elapsedTime += Time.deltaTime;
 
-            // Calculate the fill amount (0 to 1)
-            float fillAmount = elapsedTime / duration;
+                // Calculate the fill amount (0 to 1)
+                float fillAmount = elapsedTime / duration;
 
-            // Update the fill amount of the progress bar
-            progressBar.fillAmount = fillAmount;
+                // Update the fill amount of the progress bar
+                progressBar.fillAmount = fillAmount;
+            }
 
             // Wait until the next frame
             yield return null;
@@ -74,7 +84,7 @@ public class ProgressBarTemp : MonoBehaviour
     {
         Debug.Log("Progress bar is filled!");
 
-         if (animator != null && !string.IsNullOrEmpty(animationName))
+        if (animator != null && !string.IsNullOrEmpty(animationName))
         {
             // Reset the animation state to the start
             animator.Play(animationName, 0, 0f);
@@ -90,13 +100,22 @@ public class ProgressBarTemp : MonoBehaviour
         {
             targetButton2.interactable = false;  // Enable the button
         }
+
         if (targetButton3 != null)
         {
             targetButton3.interactable = false;  // Enable the button
         }
+
         if (ProcessIncompleteButton != null)
         {
             ProcessIncompleteButton.SetActive(false);  // Disable the button
         }
+    }
+
+    // Method to toggle pause and resume
+    public void TogglePauseResume()
+    {
+        isPaused = !isPaused;  // Toggle the pause/resume state
+        Debug.Log(isPaused ? "Progress paused" : "Progress resumed");
     }
 }

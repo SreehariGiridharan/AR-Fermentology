@@ -52,32 +52,22 @@ MonoBehaviour:
   - m_Id: 731531994030080
     m_Localized: "The reaction follows a set temperature sequence: starting at 5\xB0C,
       then 35\xB0C, and finally 100\xB0C. The temperature cannot be changed during
-      the process. A progress bar, represented by a golden ring around the temperature
-      button ( with a red button displaying the temperature), indicates the time
-      left for each phase. The actual reaction must also follow this sequence.\n\nA
-      demo button allows you to view a single molecule reaction in action. \n\nTo
-      learn what each molecule represents, you can check the legend button for details."
+      the process."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310667
   - m_Id: 742227200794624
     m_Localized: MENU
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: 'In this AR app, the reaction between yeast and sugar can be visualized
-      to show how these components interact to produce carbon dioxide. Here''s how
-      it works:
+    m_Localized: 'In this AR app, the fermentation process, which involves the reaction
+      between yeast and sugar, can be visualized at the particle level using AR models.
 
-
-      When yeast is mixed with sugar in water, the yeast consumes
-      the sugar in a process called fermentation. During this process, the yeast
-      cells break down the sugar into alcohol and carbon dioxide. In an AR environment,
-      you can augment this reaction by showing yeast particles interacting with sugar
-      molecules, leading to the release of Carbon dioxide gas bubbles. This visual
-      can help users understand how the yeast and sugar combine to create this gas,
-      simulating real-life fermentation.'
+'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310667
   - m_Id: 747311301222400
     m_Localized: 'The yeast and sugar reaction varies with temperature:
 
@@ -131,9 +121,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 770723339919360
-    m_Localized: Normal reaction continues
+    m_Localized: Back to the particle processes overview
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310667
   - m_Id: 780107956707328
     m_Localized: Suger
     m_Metadata:
@@ -174,10 +165,39 @@ MonoBehaviour:
     m_Localized: Wait ..process incomplete
     m_Metadata:
       m_Items: []
+  - m_Id: 9692779506917376
+    m_Localized: "            This icon displays the current temperature, in this
+      case, 5\xB0C, and also indicates the time remaining for each phase in the process. 
+      The actual reaction must also follow this sequence.\n\nA demo button allows
+      you to view a single molecule reaction in action. \n\nTo learn what each molecule
+      represents, you can check the legend button for details."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10929327443369984
+    m_Localized: "      How does the variation in temperature affect the experiment?\r\n\r\n    
+      The temperature can play a significant role in influencing the outcome of the
+      experiment. For example, changes in temperature might affect how quickly or
+      slowly the reaction progresses.\r\n\r\n"
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310667
+  - m_Id: 10932623373590528
+    m_Localized: "     If temperature is the independent              variable, what
+      does it affect, and what is the dependent variable?\r\n\r\n     When the temperature
+      changes, it can impact how the yeast and sugar interact in the fermentation
+      process. The result you're measuring, like how fast or effectively the reaction
+      occurs, will shift depending on the temperature.\r\n"
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310667
+  - m_Id: 11132965956706304
+    m_Localized: "\xA9 2024 TUM. All rights reserved."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 6519001379130310667
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0060a5f8aca702000060e5f1c9ab0200
+        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a510539902000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc0200

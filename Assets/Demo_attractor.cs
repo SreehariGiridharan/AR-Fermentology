@@ -92,7 +92,7 @@ public class Demo_attractor : MonoBehaviour
 
             case PairState.Attaching:
                 AttachObjects(object1, object2);
-                StartCoroutine(StartDelay(2f));
+                StartCoroutine(StartDelay(0f));
                 break;
 
             case PairState.Spawning:

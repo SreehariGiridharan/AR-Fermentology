@@ -36,6 +36,8 @@ public class MoveStraight : MonoBehaviour
 
     private bool hasExecuted = false;
 
+    public ProgressBarTemp pause;
+
     void Start()
     {
         InitializePositions();
@@ -131,5 +133,15 @@ public class MoveStraight : MonoBehaviour
         DemoNotification.SetActive(false);
         NextReactionNotification.SetActive(false);
         swapButton.SetActive(false);
+        if (pause != null)
+        {
+            // Call the method in Script1
+            pause.TogglePauseResume();
+        }
+        else
+        {
+            Debug.LogError("Script1 reference not assigned!");
+        }
+
     }
 }
