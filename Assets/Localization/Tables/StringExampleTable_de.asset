@@ -20,13 +20,15 @@ MonoBehaviour:
     - rid: 6519001379130310666
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Willkommen in der AR-Lernumgebung f\xFCr das Hefe-Reaktions-Experiment.
-      Folgen Sie den Anweisungen Ihres Kursleiters, um das Experiment durchzuf\xFChren.
-      Diese App begleitet Sie, indem sie die Teilchenprozesse w\xE4hrend des Experiments
-      visualisiert.\n\nDiese AR-Lernumgebung wurde an der Technischen Universit\xE4t
-      M\xFCnchen im Rahmen des DigiProMIN-Projekts unter der Leitung von Prof. Claudia
-      Nerdel und Dr. Melanie Ripsam entwickelt und von Sreehari Giridharan programmiert.Wenn
-      Sie Fragen oder technische Schwierigkeiten haben, wenden Sie sich bitte an\_melanie.ripsam@tum.de."
+    m_Localized: "Willkommen in der AR-                  Lernumgebung f\xFCr das
+      Hefe-Reaktions-Experiment. Folgen Sie den Anweisungen Ihres Kursleiters, um
+      das Experiment durchzuf\xFChren. Diese App begleitet Sie, indem sie die Teilchenprozesse
+      w\xE4hrend des Experiments visualisiert.\n\nDiese AR-Lernumgebung wurde an
+      der Technischen Universit\xE4t                      M\xFCnchen im Rahmen des                                                
+      DigiProMIN-Projekts unter der Leitung von Prof. Claudia Nerdel und Dr. Melanie
+      Ripsam entwickelt und von Sreehari Giridharan                                          
+      programmiert.Wenn Sie Fragen oder technische Schwierigkeiten haben, wenden
+      Sie sich bitte                                               an\_melanie.ripsam@tum.de."
     m_Metadata:
       m_Items: []
   - m_Id: 629294034673664
@@ -60,9 +62,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: "In dieser AR-App kann der                                                                                                                                        
-      Fermentationsprozess, der die Reaktion zwischen Hefe und Zucker umfasst, auf
-      Teilchenebene mittels AR-Modellen        visualisiert werden.\r"
+    m_Localized: "In dieser AR-App kann der                                                                                                                                                         
+      Fermentationsprozess, der die             Reaktion zwischen Hefe und Zucker
+      umfasst, auf Teilchenebene mittels AR-Modellen visualisiert werden.\r"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -158,19 +160,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10929327443369984
-    m_Localized: "      Wie beeinflusst die Temperaturvariation das Experiment?\r\n\n    
-      Die Temperatur kann eine wesentliche Rolle bei der Beeinflussung des   Ergebnisses
-      des Experimentsspielen. Zum Beispiel k\xF6nnt Temperatur\xE4nderungen\nbeeinflussen,
-      wie schnell oder langsam die Reaktion abl\xE4uft.\r"
+    m_Localized: "    Welchen Einfluss hat die           Temperatur auf das Experiment?
+      \n     \n     Die Temperatur kann eine                                                   
+      wesentliche Rolle bei der                                                             
+      Beeinflussung des Ergebnisses des Experimentsspielen. Zum Beispiel k\xF6nnt
+      Temperatur\xE4nderungen\nbeeinflussen, wie schnell oder                      
+      langsam die Reaktion abl\xE4uft.\r"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 10932623373590528
-    m_Localized: "      Wenn die Temperatur die unabh\xE4ngige Variable ist, was
-      beeinflusst sie, und was ist die abh\xE4ngige Variable?\r\n\r\n     Wenn sich
-      die Temperatur \xE4ndert, kann das die Interaktion zwischen Hefe und Zucker
-      im Fermentationsprozess                                                      
-      beeinflussen. Das Ergebnis, das du misst, wie zum Beispiel die Geschwindigkeit
+    m_Localized: "   Wenn die Temperatur die unabh\xE4ngige Variable ist, was beeinflusst
+      sie, und was ist die abh\xE4ngige Variable?\r\n\r     Wenn sich die Temperatur                           
+      \xE4ndert, kann das die Interaktion zwischen Hefe und Zucker im Fermentationsprozess
+      \nbeeinflussen. Das Ergebnis, das du misst, wie zum Beispiel die Geschwindigkeit
       oder Effektivit\xE4t der Reaktion, wird je nach Temperatur variieren.\r\n"
     m_Metadata:
       m_Items:

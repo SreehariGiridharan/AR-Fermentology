@@ -20,13 +20,14 @@ MonoBehaviour:
     - rid: 6519001379130310667
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Welcome to the AR learning environment for the Yeast Reaction Experiment.
-      Follow the instructions provided by your course instructor to conduct the experiment.
-      This app will guide you by visualizing the particle processes throughout the
-      experiment.\n\nThis AR learning environment was developed at the Technical
-      University of Munich as part of the DigiProMIN project, led by Prof. Claudia
-      Nerdel and Dr. Melanie Ripsam, and programmed by Sreehari Giridharan. If you
-      have any questions or technical difficulties, please contact\_melanie.ripsam@tum.de\_"
+    m_Localized: "Welcome to the AR learning        environment for the Yeast Reaction
+      Experiment. Follow the instructions provided by your course instructor to conduct
+      the experiment. This app will guide you by visualizing the particle processes
+      throughout the                experiment.\n\nThis AR learning environment was
+      developed at the Technical University of Munich as part of the DigiProMIN project,
+      led by Prof. Claudia Nerdel and Dr. Melanie Ripsam, and programmed by Sreehari
+      Giridharan. If you have any questions or           technical difficulties,
+      please         contact\_melanie.ripsam@tum.de\_"
     m_Metadata:
       m_Items: []
   - m_Id: 629294034673664
@@ -61,10 +62,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: 'In this AR app, the fermentation process, which involves the reaction
+    m_Localized: In this AR app, the fermentation process, which involves the reaction
       between yeast and sugar, can be visualized at the particle level using AR models.
-
-'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -174,10 +173,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10929327443369984
-    m_Localized: "      How does the variation in temperature affect the experiment?\r\n\r\n    
-      The temperature can play a significant role in influencing the outcome of the
-      experiment. For example, changes in temperature might affect how quickly or
-      slowly the reaction progresses.\r\n\r\n"
+    m_Localized: "    How does the variation in       temperature affect the experiment?\r\n\r\n   
+      The temperature can play a      significant role in influencing the outcome
+      of the experiment. For example, changes in temperature might affect how quickly
+      or slowly the reaction progresses.\r\n\r\n"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -186,7 +185,7 @@ MonoBehaviour:
       does it affect, and what is the dependent variable?\r\n\r\n     When the temperature
       changes, it can impact how the yeast and sugar interact in the fermentation
       process. The result you're measuring, like how fast or effectively the reaction
-      occurs, will shift depending on the temperature.\r\n"
+      occurs, will shift depending on the temperature.\r"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
