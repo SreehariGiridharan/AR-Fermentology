@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Help_new_updates_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 7ac25e393c2927d4babda8286ce26000, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 166032478396416
+    m_Localized: Help 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166102561021952
+    m_Localized: Help 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166106830823424
+    m_Localized: Help 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 280044213985280
+    m_Localized: This AR learning environment was developed at the Technical University
+      of Munich as part of the DigiProMIN project, led by Prof. Claudia Nerdel and
+      Dr. Melanie Ripsam, and programmed by Sreehari Giridharan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 319459154026496
+    m_Localized: "The reaction between yeast and sugar is a fermentation process
+      where yeast (a microorganism) breaks down sugar molecules in the absence of
+      oxygen to produce carbon dioxide  and ethanol (alcohol). This process is called
+      alcoholic fermentation.\n\nTemperature greatly affects    fermentation by influencing
+      enzyme activity in yeast. At low temperatures, enzyme activity slows, reducing
+      carbon dioxide production. Room temperature \n( around 35\xB0C) is optimal
+      for maximum carbon dioxide production, while high temperatures denature enzymes,
+      decreasing carbondioxide output and potentially killing the yeast."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

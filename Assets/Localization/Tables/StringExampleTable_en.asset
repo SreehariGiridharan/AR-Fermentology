@@ -20,16 +20,13 @@ MonoBehaviour:
     - rid: 6519001379130310667
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Welcome to the AR learning        environment for the Yeast Reaction
-      Experiment. Follow the instructions provided by your course instructor to conduct
-      the experiment. This app will guide you by visualizing the particle processes
-      throughout the                experiment.\n\nThis AR learning environment was
-      developed at the Technical University of Munich as part of the DigiProMIN project,
-      led by Prof. Claudia Nerdel and Dr. Melanie Ripsam, and programmed by Sreehari
-      Giridharan. If you have any questions or           technical difficulties,
-      please         contact\_melanie.ripsam@tum.de\_"
+    m_Localized: Welcome to the AR learning       environment for the yeast     experiment.
+      This AR app will guide you through a series of experiments on the impact of
+      temperature on yeast activity. The particle processes will be illustrated using
+      AR. Please follow the instructions to conduct the experiment.
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310667
   - m_Id: 629294034673664
     m_Localized: WELCOME
     m_Metadata:
@@ -39,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 631500565733376
-    m_Localized: HELP ?
+    m_Localized: HELP CARDS
     m_Metadata:
       m_Items: []
   - m_Id: 631542420692992
@@ -51,9 +48,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "The reaction follows a set temperature sequence: starting at 5\xB0C,
-      then 35\xB0C, and finally 100\xB0C. The temperature cannot be changed during
-      the process."
+    m_Localized: "The experimental series with three different temperature settings
+      follows a                predetermined sequence: it begins at 5\xB0C, then
+      35\xB0C, and finally 100\xB0C. The          temperatures should remain largely
+      constant during the different experimental runs."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -62,27 +60,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: In this AR app, the fermentation process, which involves the reaction
-      between yeast and sugar, can be visualized at the particle level using AR models.
+    m_Localized: In this app, the process of alcoholic fermentation can be visualized
+      at the particle level with a focus on enzyme activity through AR models.
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 747311301222400
-    m_Localized: 'The yeast and sugar reaction varies with temperature:
-
-
-
-
-
-
-
-
-
-
-      This
-      helps users see how temperature affects the reaction.
-
-'
+    m_Localized: "Enzyme activity depends on       temperature:  \n\n\n\n\n\n\n\n\n\n\n\n\n"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -112,7 +96,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 762434237587456
-    m_Localized: Illustratation of basic reaction
+    m_Localized: Illustration of the enzyme reaction
     m_Metadata:
       m_Items: []
   - m_Id: 768958813003776
@@ -125,9 +109,10 @@ MonoBehaviour:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 780107956707328
-    m_Localized: Suger
+    m_Localized: Sugar
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310667
   - m_Id: 780151170621440
     m_Localized: Yeast
     m_Metadata:
@@ -157,7 +142,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Yeast-sugar reaction in AR
+    m_Localized: Reaction of sugar and yeast in AR
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
@@ -165,32 +150,60 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9692779506917376
-    m_Localized: "            This icon displays the current temperature, in this
-      case, 5\xB0C, and also indicates the time remaining for each phase in the process. 
-      The actual reaction must also follow this sequence.\n\nA demo button allows
-      you to view a single molecule reaction in action. \n\nTo learn what each molecule
-      represents, you can check the legend button for details."
+    m_Localized: "           This symbol displays the current temperature, in this
+      case, 5\xB0C, and also shows the remaining time for each phase of the process.
+      The actual reaction must also follow this sequence.\r\n\r\nThe demo button
+      illustrates the ongoing reaction in the yeast experiment at a particle level
+      as an example.\r\n\r\nFurther information on the reactants and products at
+      a representative level is provided by the legend."
     m_Metadata:
       m_Items: []
   - m_Id: 10929327443369984
-    m_Localized: "    How does the variation in       temperature affect the experiment?\r\n\r\n   
-      The temperature can play a      significant role in influencing the outcome
-      of the experiment. For example, changes in temperature might affect how quickly
-      or slowly the reaction progresses.\r\n\r\n"
+    m_Localized: "       Scientific Question: What influence does temperature have
+      on enzyme activity?  \r\n\r\n      Temperature can have a significant impact
+      on the activity of enzymes. What hypothesis can be formulated?  \r\n\r\nTip:
+      Changes in temperature can, for example, affect how quickly or slowly a reaction
+      occurs."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 10932623373590528
-    m_Localized: "     If temperature is the independent              variable, what
-      does it affect, and what is the dependent variable?\r\n\r\n     When the temperature
-      changes, it can impact how the yeast and sugar interact in the fermentation
-      process. The result you're measuring, like how fast or effectively the reaction
-      occurs, will shift depending on the temperature.\r"
+    m_Localized: "   If temperature is considered the independent variable, what
+      does it act upon? What is the dependent variable?  \r\n\r\n\n    When the temperature
+      changes, the enzyme activity should also change. Consequently, the outcome
+      of alcoholic fermentation is influenced differently in terms of speed and efficiency.
+      The three experiments yield different results. What can be expected?"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 11132965956706304
     m_Localized: "\xA9 2024 TUM. All rights reserved."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22829109296324608
+    m_Localized: SOLUTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23854331042553856
+    m_Localized: ENGLISH
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310667
+  - m_Id: 23856016594919424
+    m_Localized: GERMAN
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310667
+  - m_Id: 24501748771414016
+    m_Localized: Process complete !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24503279147114496
+    m_Localized: Representation level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24507923176972288
+    m_Localized: Magnifiying.....
     m_Metadata:
       m_Items: []
   references:
@@ -199,4 +212,4 @@ MonoBehaviour:
     - rid: 6519001379130310667
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a510539902000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc0200
+        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a510539902000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc02000060258e090000000060a50981c502000060254063bf54000060e5b2ebc05400

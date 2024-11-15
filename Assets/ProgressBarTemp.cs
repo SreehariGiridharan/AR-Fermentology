@@ -4,6 +4,13 @@ using System.Collections;
 
 public class ProgressBarTemp : MonoBehaviour
 {
+    public enum ObjectState
+    {
+        Temp5,
+        Temp35,
+        Temp100
+    }
+    public ObjectState currentTempState;
     public Image progressBar; // Reference to the Image component
     public float duration = 5f; // Duration in seconds for the progress bar to fill
     public Button targetButton1, targetButton2, targetButton3; // Reference to the Button components
@@ -15,9 +22,26 @@ public class ProgressBarTemp : MonoBehaviour
 
     public Animator animator; // Reference to the Animator component
     public string animationName;
-
+    public int determiner = 0;
+     public Image targetImage1, targetImage2, targetImage3; // Reference to the Image component
     void OnEnable()
     {
+         switch (currentTempState)
+        {
+            case ObjectState.Temp5:
+                determiner = 3;
+                
+                    
+                break;
+            case ObjectState.Temp35:
+                determiner = 1;
+                
+                break;
+            case ObjectState.Temp100:
+                determiner = 2;
+                
+                break;
+        }
         // Set buttons to non-interactable at the start
         if (targetButton1 != null)
             targetButton1.interactable = false;
@@ -91,25 +115,91 @@ public class ProgressBarTemp : MonoBehaviour
         }
 
         // Enable the buttons once the progress bar is fully filled
-        if (targetButton1 != null)
+        if (determiner == 1)
         {
-            targetButton1.interactable = true;  // Enable the button
-        }
+            if (targetButton1 != null)
+            {
+                targetButton1.interactable = true;  // Enable the button
+            }
 
-        if (targetButton2 != null)
-        {
-            targetButton2.interactable = false;  // Enable the button
-        }
+            if (targetButton2 != null)
+            {
+                targetButton2.interactable = false;  // Enable the button
+            }
 
-        if (targetButton3 != null)
-        {
-            targetButton3.interactable = false;  // Enable the button
-        }
+            if (targetButton3 != null)
+            {
+                targetButton3.interactable = false;  // Enable the button
+            }
 
-        if (ProcessIncompleteButton != null)
-        {
-            ProcessIncompleteButton.SetActive(false);  // Disable the button
+            if (ProcessIncompleteButton != null)
+            {
+                ProcessIncompleteButton.SetActive(false);  // Disable the button
+            }
         }
+        else if (determiner == 2)
+        {
+            if (targetButton1 != null)
+            {
+                targetButton1.interactable = false;  // Enable the button
+            }
+
+            if (targetButton2 != null)
+            {
+                targetButton2.interactable = true;  // Enable the button
+            }
+
+            if (targetButton3 != null)
+            {
+                targetButton3.interactable = false;  // Enable the button
+            }
+
+            if (ProcessIncompleteButton != null)
+            {
+                ProcessIncompleteButton.SetActive(false);  // Disable the button
+            }
+        }
+        else if (determiner == 3)
+        {
+            if (targetButton1 != null)
+            {
+                targetButton1.interactable = false;  // Enable the button
+            }
+
+            if (targetButton2 != null)
+            {
+                targetButton2.interactable = false;  // Enable the button
+            }
+
+            if (targetButton3 != null)
+            {
+                targetButton3.interactable = true;  // Enable the button
+            }
+
+            if (ProcessIncompleteButton != null)
+            {
+                ProcessIncompleteButton.SetActive(false);  // Disable the button
+            }
+        }
+        // if (targetButton1 != null)
+        // {
+        //     targetButton1.interactable = true;  // Enable the button
+        // }
+
+        // if (targetButton2 != null)
+        // {
+        //     targetButton2.interactable = false;  // Enable the button
+        // }
+
+        // if (targetButton3 != null)
+        // {
+        //     targetButton3.interactable = false;  // Enable the button
+        // }
+
+        // if (ProcessIncompleteButton != null)
+        // {
+        //     ProcessIncompleteButton.SetActive(false);  // Disable the button
+        // }
     }
 
     // Method to toggle pause and resume

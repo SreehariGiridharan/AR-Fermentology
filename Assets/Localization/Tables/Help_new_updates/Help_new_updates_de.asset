@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Help_new_updates_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 7ac25e393c2927d4babda8286ce26000, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 166032478396416
+    m_Localized: Hilfe 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166102561021952
+    m_Localized: Hilfe 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166106830823424
+    m_Localized: Hilfe 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 280044213985280
+    m_Localized: "Diese AR-Lernumgebung wurde an der Technischen Universit\xE4t M\xFCnchen
+      im Rahmen des DigiProMIN-Projekts unter der Leitung von Prof. Claudia Nerdel
+      und Dr. Melanie Ripsam entwickelt und von Sreehari Giridharan programmiert."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 319459154026496
+    m_Localized: "Die Reaktion zwischen Hefe und Zucker ist ein G\xE4rungsprozess,
+      bei dem Hefe (ein Mikroorganismus) Zuckermolek\xFCle in Abwesenheit von Sauerstoff
+      abbaut, um Kohlendioxid und Ethanol (Alkohol) zu produzieren. Dieser Prozess
+      wird alkoholische G\xE4rung genannt.  \r\n\r\nDie Temperatur hat einen gro\xDFen
+      Einfluss auf die G\xE4rung, da sie die Enzymaktivit\xE4t der Hefe beeinflusst.
+      Bei niedrigen Temperaturen verlangsamt sich die Enzymaktivit\xE4t, was die
+      Kohlendioxidproduktion reduziert. Raumtemperatur (etwa 35 \xB0C) ist optimal
+      f\xFCr die maximale         Kohlendioxidproduktion, w\xE4hrend \nhohe Temperaturen
+      die \nEnzyme denaturieren, die                  Kohlendioxidproduktion verringern
+      und die Hefe m\xF6glicherweise abt\xF6ten."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

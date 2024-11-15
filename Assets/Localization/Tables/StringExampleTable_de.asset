@@ -20,17 +20,14 @@ MonoBehaviour:
     - rid: 6519001379130310666
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Willkommen in der AR-                  Lernumgebung f\xFCr das
-      Hefe-Reaktions-Experiment. Folgen Sie den Anweisungen Ihres Kursleiters, um
-      das Experiment durchzuf\xFChren. Diese App begleitet Sie, indem sie die Teilchenprozesse
-      w\xE4hrend des Experiments visualisiert.\n\nDiese AR-Lernumgebung wurde an
-      der Technischen Universit\xE4t                      M\xFCnchen im Rahmen des                                                
-      DigiProMIN-Projekts unter der Leitung von Prof. Claudia Nerdel und Dr. Melanie
-      Ripsam entwickelt und von Sreehari Giridharan                                          
-      programmiert.Wenn Sie Fragen oder technische Schwierigkeiten haben, wenden
-      Sie sich bitte                                               an\_melanie.ripsam@tum.de."
+    m_Localized: "Willkommen in der AR-                 Lernumgebung f\xFCr das Hefe-Experiment.
+      Diese AR-App begleitet Sie bei der Durchf\xFChrung einer Experimentierreihe
+      zum Einfluss der Temperatur auf die Hefeaktivit\xE4t. Dabei werden die  Teilchenprozesse
+      mittels AR   veranschaulicht. Folgen Sie bitte den Anweisungen, um das Experiment
+      durchzuf\xFChren"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 629294034673664
     m_Localized: WILLKOMMEN
     m_Metadata:
@@ -40,7 +37,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 631500565733376
-    m_Localized: HILFE ?
+    m_Localized: HILFEKARTEN
     m_Metadata:
       m_Items: []
   - m_Id: 631542420692992
@@ -52,25 +49,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "Die Reaktion folgt einer festgelegten Temperatursequenz: Sie beginnt
-      bei 5\xB0C, dann 35\xB0C und schlie\xDFlich 100\xB0C. Die Temperatur kann w\xE4hrend
-      des Prozesses nicht ver\xE4ndert werden.\r\n\r\n             \n\n"
+    m_Localized: "Die Durchf\xFChrung  Experimentierreihe \nmit drei verschiedenen                                                                                 
+      Temperatureinstellungen folgt einer          festgelegten Abfolge: Sie beginnt
+      bei 5\xB0C, dann 35\xB0C und schlie\xDFlich 100\xB0C. Die Temperaturen sollten
+      in den verschiedenen experimentellen Durchl\xE4ufen weitgehend konstant gehalten
+      werden."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 742227200794624
     m_Localized: MENU
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: "In dieser AR-App kann der                                                                                                                                                         
-      Fermentationsprozess, der die             Reaktion zwischen Hefe und Zucker
-      umfasst, auf Teilchenebene mittels AR-Modellen visualisiert werden.\r"
+    m_Localized: "In dieser AR-App kann der Prozess bei der alkoholischen G\xE4rung
+      mit Fokus auf die Enzymaktivit\xE4t durch AR-Modelle auf Teilchenebene visualisiert
+      werden."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 747311301222400
-    m_Localized: "Die Reaktion von Hefe und Zucker variiert je nach Temperatur: \n\n\n\n\n\n\n\n\n\n\nDies
-      hilft den Benutzern zu sehen, wie die Temperatur die Reaktion beeinflusst."
+    m_Localized: "Enzymaktivitat h\xE4ngt von der                Temperature ab: 
+      \n\n\n\n\n\n\n\n\n\n\n\n."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 762434237587456
-    m_Localized: Illustration der Grundreaktion
+    m_Localized: Veranschaulichung der Enyzmreaktion
     m_Metadata:
       m_Items: []
   - m_Id: 768958813003776
@@ -133,19 +133,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 781880519909376
-    m_Localized: (Vor)
+    m_Localized: (Vorher)
     m_Metadata:
       m_Items: []
   - m_Id: 787109197996032
-    m_Localized: Kohlenstoffdioxide
+    m_Localized: Kohlenstoffdioxid
     m_Metadata:
       m_Items: []
   - m_Id: 789098514440192
-    m_Localized: (Nach)
+    m_Localized: (Nachher)
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Hefe-Zucker-Reaktion in AR
+    m_Localized: Reaktion von Zucker und Hefe in AR
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
@@ -153,33 +153,64 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9692779506917376
-    m_Localized: "            Das Symbol zeigt die aktuelle Temperatur (hier 5\xB0C)
-      und die verbleibende Zeit pro Phase an. Die Reaktion muss dieser Sequenz folgen.\r\n\r\nEin
-      Demo-Button zeigt eine Molek\xFClreaktion. \r\n\r\nDetails zu den Molek\xFClen
-      finden Sie \xFCber die Legende."
+    m_Localized: "            Dieses Symbol zeigt die aktuelle Temperatur an, in
+      diesem Fall 5\xB0C, und gibt zudem die verbleibende Zeit f\xFCr jede Phase
+      des Prozesses an. Die tats\xE4chliche Reaktion muss ebenfalls dieser Sequenz
+      folgen.\r\n\nDer Demo-Button zeigt auf Teilchenebene die ablaufende Reaktion
+      des                        Hefeexperiments an einem Beispiel  auf.\n\nN\xE4here
+      Informationen zu den Edukten und Produkten auf repr\xE4sentativer Ebene liefert
+      Ihnen die Legende."
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 10929327443369984
-    m_Localized: "    Welchen Einfluss hat die           Temperatur auf das Experiment?
-      \n     \n     Die Temperatur kann eine                                                   
-      wesentliche Rolle bei der                                                             
-      Beeinflussung des Ergebnisses des Experimentsspielen. Zum Beispiel k\xF6nnt
-      Temperatur\xE4nderungen\nbeeinflussen, wie schnell oder                      
-      langsam die Reaktion abl\xE4uft.\r"
+    m_Localized: "     Wissenschaftliche Fragestellung: Welchen Einfluss hat die
+      Temperatur auf die Enzymaktivit\xE4t?\n\n     Die Temperatur kann einen           
+      wesentlichen Einfluss auf die Aktivit\xE4t des Enzyms haben. Welche Hypothese
+      l\xE4sst sich aufstellen? \n\nTipp: Temperaturver\xE4nderungen k\xF6nnen beispielsweise
+      beeinflussen wie schnell oder langsam eine Reaktion von statten geht."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 10932623373590528
-    m_Localized: "   Wenn die Temperatur die unabh\xE4ngige Variable ist, was beeinflusst
-      sie, und was ist die abh\xE4ngige Variable?\r\n\r     Wenn sich die Temperatur                           
-      \xE4ndert, kann das die Interaktion zwischen Hefe und Zucker im Fermentationsprozess
-      \nbeeinflussen. Das Ergebnis, das du misst, wie zum Beispiel die Geschwindigkeit
-      oder Effektivit\xE4t der Reaktion, wird je nach Temperatur variieren.\r\n"
+    m_Localized: "   Wenn die Temperatur als      unabh\xE4ngige Variable zu betrachten
+      ist, worauf wirkt sie? wie lautet sie       abh\xE4ngige Variable?\n\n    
+      Wenn sich die Temperatur \xE4ndert, sollte sich auch die Enzymaktivit\xE4t
+      ver\xE4ndern. Entsprechend wird da Ergebnis der alkoholischen G\xE4rung mit
+      Blick auf die Geschwindigkeit und Effektivit\xE4t unterschiedlich beeinflusst.
+      Die drei Experimente liefern             unterschiedlische Resultate. Welche
+      sind zu erwarten?\n"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 11132965956706304
     m_Localized: "\xA9 2024 TUM. Alle Rechte vorbehalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22829109296324608
+    m_Localized: "L\xD6SUNG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23854331042553856
+    m_Localized: ENGLISCH
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 23856016594919424
+    m_Localized: DEUTSCH
+    m_Metadata:
+      m_Items:
+      - rid: 6519001379130310666
+  - m_Id: 24501748771414016
+    m_Localized: Vorgang abgeschlossen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24503279147114496
+    m_Localized: "Repr\xE4sentationsebene"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24507923176972288
+    m_Localized: "Vergr\xF6\xDFerung mit der Super-Lupe"
     m_Metadata:
       m_Items: []
   references:
@@ -188,4 +219,4 @@ MonoBehaviour:
     - rid: 6519001379130310666
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc0200
+        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc02000060258e090000000060a5105399020000606517886f22000060254063bf54000060e5b2ebc05400

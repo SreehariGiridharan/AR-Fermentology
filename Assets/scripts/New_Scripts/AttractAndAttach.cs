@@ -9,10 +9,25 @@ public class AttractAndAttach : MonoBehaviour
     {
         public Transform object1;
         public Transform object2;
-       
+
+        public ObjectPair(Transform obj1, Transform obj2)
+        {
+            object1 = obj1;
+            object2 = obj2;
+        }
+        
     }
+    public enum ObjectState
+    {
+        Temp5,
+        Temp35,
+        Temp100
+    }
+    public VuforiaCameraZoom Zoom;
+    public ObjectState currentTempState;
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
+   
     public GameObject spawnPrefab1, spawnPrefab2, Water,H20Notification,DemoReactionButton,DemoReactionButtonDuplicate; // Prefab to spawn
     public float attractionForce = 10f; // Strength of attraction force
     public float attachDistance = 0.5f; // Distance threshold for attaching the objects
@@ -45,13 +60,48 @@ public class AttractAndAttach : MonoBehaviour
 
      public float timeLimit = 5f;  // Set a time limit for Scriptoff state
     private float timeInScriptoff = 0f;  // Track how much time has passed in Scriptoff
-
-    private void Start()
+    
+    public void Start()
     {
-        // if (animator == null)
-        // {
-        //     animator = GetComponent<Animator>();
-        // }
+        if (Zoom == null)
+        {
+            Zoom = GetComponent<VuforiaCameraZoom>();
+        }
+        
+        switch (currentTempState)
+        {
+            case ObjectState.Temp5:
+                assigningTemp0Pairs();
+                int maxCount = 3;
+                attractionForce = 0.0005f;
+                DelayAfterH20Disappearance=5.0f;
+                Water.SetActive(true);
+                Zoom.H20ListBool = true;
+                Zoom.AttractionScriptBool = true;
+                H20NotificationBool = true;
+                if (objectPairs.Count > maxCount)
+                    {
+                        objectPairs.RemoveRange(maxCount, objectPairs.Count - maxCount);
+                    }
+                
+                break;
+            case ObjectState.Temp35:
+                H20NotificationBool = false;
+                DelayAfterH20Disappearance=0.0f;
+                attractionForce = 0.003f;
+                Zoom.H20ListBool = false;
+                Zoom.AttractionScriptBool = true;
+                assigningTemp35Pairs();
+                break;
+            case ObjectState.Temp100:
+                H20NotificationBool = false;
+                Zoom.H20ListBool = false;
+                Zoom.AttractionScriptBool = false;
+                break;
+        }
+        
+        
+
         StartCoroutine(StartAfterDelay(initialWaitTime));
         
     }
@@ -330,5 +380,28 @@ public class AttractAndAttach : MonoBehaviour
         Debug.Log("Distance"+ distance+ "StartingDistance"+ StartingDistance);
         return distance >= StartingDistance; // Check if objects are within the threshold distance
     }
+    public void assigningTemp0Pairs()
+    {
+        objectPairs[0] = new ObjectPair(GameObject.Find("Yeast_Updated").transform, GameObject.Find("Sugar").transform);
+        objectPairs[1] = new ObjectPair(GameObject.Find("Yeast_Updated (1)").transform, GameObject.Find("Sugar (1)").transform);
+        objectPairs[2] = new ObjectPair(GameObject.Find("Yeast_Updated (2)").transform, GameObject.Find("Sugar (2)").transform);
+        
 
+    }
+    public void assigningTemp35Pairs()
+    {
+        objectPairs[0] = new ObjectPair(GameObject.Find("Yeast_Updated").transform, GameObject.Find("Sugar").transform);
+        objectPairs[1] = new ObjectPair(GameObject.Find("Yeast_Updated (1)").transform, GameObject.Find("Sugar (1)").transform);
+        objectPairs[2] = new ObjectPair(GameObject.Find("Yeast_Updated (2)").transform, GameObject.Find("Sugar (2)").transform);
+        objectPairs[3] = new ObjectPair(GameObject.Find("Yeast_Updated (3)").transform, GameObject.Find("Sugar (3)").transform);
+        objectPairs[4] = new ObjectPair(GameObject.Find("Yeast_Updated (4)").transform, GameObject.Find("Sugar (4)").transform);
+        objectPairs[5] = new ObjectPair(GameObject.Find("Yeast_Updated (5)").transform, GameObject.Find("Sugar (5)").transform);
+        objectPairs[6] = new ObjectPair(GameObject.Find("Yeast_Updated (6)").transform, GameObject.Find("Sugar (6)").transform);
+        objectPairs[7] = new ObjectPair(GameObject.Find("Yeast_Updated (7)").transform, GameObject.Find("Sugar (7)").transform);
+        objectPairs[8] = new ObjectPair(GameObject.Find("Yeast_Updated (8)").transform, GameObject.Find("Sugar (8)").transform);
+        objectPairs[9] = new ObjectPair(GameObject.Find("Yeast_Updated (9)").transform, GameObject.Find("Sugar (9)").transform);
+        objectPairs[10] = new ObjectPair(GameObject.Find("Yeast_Updated (10)").transform, GameObject.Find("Sugar (10)").transform);
+
+    }
+    
 }
