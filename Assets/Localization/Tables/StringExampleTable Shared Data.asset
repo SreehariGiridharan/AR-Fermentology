@@ -171,6 +171,10 @@ MonoBehaviour:
     m_Key: Magnifiying_text
     m_Metadata:
       m_Items: []
+  - m_Id: 25307553049436160
+    m_Key: solution notification
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

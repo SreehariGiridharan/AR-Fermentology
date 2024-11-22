@@ -10,6 +10,7 @@ public class ProgressBarTemp : MonoBehaviour
         Temp35,
         Temp100
     }
+
     public ObjectState currentTempState;
     public Image progressBar; // Reference to the Image component
     public float duration = 5f; // Duration in seconds for the progress bar to fill
@@ -24,21 +25,27 @@ public class ProgressBarTemp : MonoBehaviour
     public string animationName;
     public int determiner = 0;
      public Image targetImage1, targetImage2, targetImage3; // Reference to the Image component
+     public GameObject menu_changer;
     void OnEnable()
     {
          switch (currentTempState)
         {
             case ObjectState.Temp5:
                 determiner = 3;
+                duration = 155f; 
                 
                     
                 break;
             case ObjectState.Temp35:
                 determiner = 1;
+                duration = 158f; 
                 
                 break;
             case ObjectState.Temp100:
                 determiner = 2;
+                duration = 10f; 
+                menu_changer scriptA = menu_changer.GetComponent<menu_changer>();
+                scriptA.Temperature100 = true;
                 
                 break;
         }
@@ -69,10 +76,10 @@ public class ProgressBarTemp : MonoBehaviour
         progressCoroutine = StartCoroutine(FillProgressBar());
 
         // Add listener to the pause/resume button
-        if (pauseResumeButton != null)
-        {
-            pauseResumeButton.onClick.AddListener(TogglePauseResume);
-        }
+        // if (pauseResumeButton != null)
+        // {
+        //     pauseResumeButton.onClick.AddListener(TogglePauseResume);
+        // }
     }
 
     private IEnumerator FillProgressBar()

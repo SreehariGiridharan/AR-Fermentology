@@ -60,6 +60,21 @@ public class AttractAndAttach : MonoBehaviour
 
      public float timeLimit = 5f;  // Set a time limit for Scriptoff state
     private float timeInScriptoff = 0f;  // Track how much time has passed in Scriptoff
+
+    void OnEnable()
+    {
+         string childName0 = "Yeast";
+                Transform child0 = objectPairs[currentPairIndex].object1.Find(childName0);
+                Renderer renderer1 = objectPairs[currentPairIndex].object2.GetComponent<Renderer>();
+                if (renderer1 != null)
+                {
+                    if (blinkCoroutine != null)
+                    {
+                        StopCoroutine(blinkCoroutine);
+                    }
+                    blinkCoroutine = StartCoroutine(BlinkMaterials(child0, objectPairs[currentPairIndex].object2));
+                }
+    }
     
     public void Start()
     {

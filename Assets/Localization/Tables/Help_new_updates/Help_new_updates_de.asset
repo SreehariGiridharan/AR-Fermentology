@@ -33,7 +33,8 @@ MonoBehaviour:
   - m_Id: 280044213985280
     m_Localized: "Diese AR-Lernumgebung wurde an der Technischen Universit\xE4t M\xFCnchen
       im Rahmen des DigiProMIN-Projekts unter der Leitung von Prof. Claudia Nerdel
-      und Dr. Melanie Ripsam entwickelt und von Sreehari Giridharan programmiert."
+      und Dr. Melanie Ripsam             entwickelt und von Sreehari          Giridharan
+      programmiert."
     m_Metadata:
       m_Items: []
   - m_Id: 319459154026496
@@ -47,6 +48,10 @@ MonoBehaviour:
       f\xFCr die maximale         Kohlendioxidproduktion, w\xE4hrend \nhohe Temperaturen
       die \nEnzyme denaturieren, die                  Kohlendioxidproduktion verringern
       und die Hefe m\xF6glicherweise abt\xF6ten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742151556521984
+    m_Localized: "L\xD6SUNG"
     m_Metadata:
       m_Items: []
   references:

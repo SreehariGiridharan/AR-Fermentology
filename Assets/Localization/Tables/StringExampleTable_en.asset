@@ -206,6 +206,10 @@ MonoBehaviour:
     m_Localized: Magnifiying.....
     m_Metadata:
       m_Items: []
+  - m_Id: 25307553049436160
+    m_Localized: Solution is now available in the menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

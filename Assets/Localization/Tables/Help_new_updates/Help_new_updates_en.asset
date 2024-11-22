@@ -33,7 +33,7 @@ MonoBehaviour:
   - m_Id: 280044213985280
     m_Localized: This AR learning environment was developed at the Technical University
       of Munich as part of the DigiProMIN project, led by Prof. Claudia Nerdel and
-      Dr. Melanie Ripsam, and programmed by Sreehari Giridharan.
+      Dr. Melanie Ripsam, and                programmed by Sreehari             Giridharan.
     m_Metadata:
       m_Items: []
   - m_Id: 319459154026496
@@ -45,6 +45,10 @@ MonoBehaviour:
       carbon dioxide production. Room temperature \n( around 35\xB0C) is optimal
       for maximum carbon dioxide production, while high temperatures denature enzymes,
       decreasing carbondioxide output and potentially killing the yeast."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742151556521984
+    m_Localized: SOLUTION
     m_Metadata:
       m_Items: []
   references:
