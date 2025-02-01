@@ -7,16 +7,17 @@ public class VuforiaCameraZoom : MonoBehaviour
 {
     public Camera vuforiaCamera;
     public RawImage rawImage;
-    public Vector2 initialSize = new Vector2(540, 1140); // Set your initial RawImage size (width, height)
-    public Vector2 targetSize = new Vector2(1920, 1080); // Set your target RawImage size (width, height)
+    public Canvas canvas; // Reference to the Canvas
     public float zoomDuration = 2.0f; // Duration for the zoom effect in seconds
-    public Vector2 zoomLevel = new Vector2(2.0f, 2.0f); // Set your desired zoom level here (width, height)
+    public float zoomMultiplier = 2.0f; // Zoom level multiplier
     public Vector2 offset = Vector2.zero; // Set your desired offset here (x, y)
-    public GameObject magniText,Script1,Demo_reaction_container,Yeast_Reaction,H20Notification,Attractor,H20List,DemoReactionButton, DemoReactionButtonDuplicate;
+    public GameObject magniText, Script1, Demo_reaction_container, Yeast_Reaction, H20Notification, Attractor, H20List, DemoReactionButton, DemoReactionButtonDuplicate;
     public bool H20ListBool = true;
     public bool AttractionScriptBool = true;
 
     private RenderTexture renderTexture;
+    private Vector2 initialSize;
+    private Vector2 targetSize;
 
     void Start()
     {
@@ -25,11 +26,15 @@ public class VuforiaCameraZoom : MonoBehaviour
 
         // Set the RawImage color to transparent
         SetRawImageTransparent();
-
     }
 
     private void InitializeZoom()
     {
+        // Calculate the initial and target sizes based on canvas size and zoom multiplier
+        RectTransform canvasRect = canvas.GetComponent<RectTransform>();
+        initialSize = new Vector2(canvasRect.rect.width, canvasRect.rect.height);
+        targetSize = initialSize * zoomMultiplier;
+
         // Create a new RenderTexture with the same dimensions as the screen
         renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
 
@@ -41,7 +46,7 @@ public class VuforiaCameraZoom : MonoBehaviour
 
         // Set the initial size and scale of the RawImage
         rawImage.rectTransform.sizeDelta = initialSize;
-        rawImage.rectTransform.localScale = new Vector3(zoomLevel.x, zoomLevel.y, 1);
+        rawImage.rectTransform.localScale = Vector3.one;
 
         // Adjust the position of the RawImage for the desired offset
         rawImage.rectTransform.anchoredPosition = offset;
@@ -66,13 +71,10 @@ public class VuforiaCameraZoom : MonoBehaviour
     }
 
     // Optionally, add methods to adjust zoom and offset dynamically
-    public void SetZoomLevel(Vector2 newZoomLevel)
+    public void SetZoomLevel(float newZoomMultiplier)
     {
-        zoomLevel = newZoomLevel;
-        if (rawImage != null)
-        {
-            rawImage.rectTransform.localScale = new Vector3(zoomLevel.x, zoomLevel.y, 1);
-        }
+        zoomMultiplier = newZoomMultiplier;
+        targetSize = initialSize * zoomMultiplier;
     }
 
     public void SetOffset(Vector2 newOffset)
@@ -82,12 +84,6 @@ public class VuforiaCameraZoom : MonoBehaviour
         {
             rawImage.rectTransform.anchoredPosition = offset;
         }
-    }
-
-    // Optionally, add a method to reset the transparency
-    public void SetRawImageAlpha(float alpha)
-    {
-        rawImage.color = new Color(rawImage.color.r, rawImage.color.g, rawImage.color.b, alpha);
     }
 
     // Method to set the size of the RawImage
@@ -124,11 +120,18 @@ public class VuforiaCameraZoom : MonoBehaviour
 
         // Ensure the final size is exactly the target size
         SetRawImageSize(targetSize);
+
+        // Ensure the final size is exactly the target size
+        // SetRawImageSize(targetSize);
+
+        // Trigger additional actions after zoom completes
+        // magniText.SetActive(false);
+        // StartButtonReaction();
     }
 
     public void Demo_reaction_active()
     {
-        Demo_reaction_container.SetActive (true);
+        Demo_reaction_container.SetActive(true);
         DemoScriptOn();
     }
 
@@ -139,30 +142,26 @@ public class VuforiaCameraZoom : MonoBehaviour
 
         if (exampleScript != null)
         {
-            // Set the isActive boolean to true or false
-            exampleScript.enabled = true; // or false
+            exampleScript.enabled = true; // Activate the script
         }
         else
         {
             Debug.LogError("Demo_attractor component not found on the target object.");
         }
     }
+
     public void StartButtonReaction()
     {
-        
         AttractAndAttach newscript = Attractor.GetComponent<AttractAndAttach>();
-        
+
         if (AttractionScriptBool)
         {
             newscript.enabled = true;
         }
-        
+
         if (H20ListBool)
         {
             H20List.SetActive(true);
         }
-        
-        
     }
-
 }
