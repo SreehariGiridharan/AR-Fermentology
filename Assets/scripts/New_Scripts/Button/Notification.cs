@@ -1,11 +1,12 @@
 using UnityEngine;
-using System.Collections; // Add this line to import the IEnumerator interface
+using System.Collections; // Import IEnumerator interface
 
 public class Notification : MonoBehaviour
 {
     public Animator animator; // Reference to the Animator component
     public string firstAnimationName; // Name of the first animation to play
     public string secondAnimationName; // Name of the second animation to play
+    public float initialDelay = 0f; // Time in seconds before starting the first animation
     public float delayBetweenAnimations = 2f; // Time in seconds to wait between animations
 
     private void Start()
@@ -17,11 +18,13 @@ public class Notification : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(PlayAnimations());
-
     }
 
     private IEnumerator PlayAnimations()
     {
+        // Wait for the initial delay before starting the first animation
+        yield return new WaitForSeconds(initialDelay);
+
         // Play the first animation
         animator.Play(firstAnimationName);
 

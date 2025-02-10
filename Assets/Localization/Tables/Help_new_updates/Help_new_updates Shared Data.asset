@@ -16,11 +16,11 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 7ac25e393c2927d4babda8286ce26000
   m_Entries:
   - m_Id: 166032478396416
-    m_Key: Help1
+    m_Key: Task1
     m_Metadata:
       m_Items: []
   - m_Id: 166102561021952
-    m_Key: Help2
+    m_Key: Task 2
     m_Metadata:
       m_Items: []
   - m_Id: 166106830823424
@@ -37,6 +37,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 742151556521984
     m_Key: SOLUTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30609360164315136
+    m_Key: legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31498741561516032
+    m_Key: show tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31499047527604224
+    m_Key: Hide Tip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31509597343014912
+    m_Key: Task4
     m_Metadata:
       m_Items: []
   m_Metadata:

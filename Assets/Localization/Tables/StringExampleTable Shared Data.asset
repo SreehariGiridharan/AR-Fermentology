@@ -175,6 +175,26 @@ MonoBehaviour:
     m_Key: solution notification
     m_Metadata:
       m_Items: []
+  - m_Id: 55842918868803584
+    m_Key: Task_button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55855915595030528
+    m_Key: Tip info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55859064351318016
+    m_Key: Tip info 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55861746143158272
+    m_Key: Task4 info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55862171533664256
+    m_Key: Tip4
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

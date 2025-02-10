@@ -20,11 +20,12 @@ MonoBehaviour:
     - rid: 6519001379130310666
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Willkommen in der AR-                 Lernumgebung f\xFCr das Hefe-Experiment.
+    m_Localized: "Willkommen in der AR-             Lernumgebung f\xFCr das Hefe-Experiment.
       Diese AR-App begleitet Sie bei der Durchf\xFChrung einer Experimentierreihe
-      zum Einfluss der Temperatur auf die Hefeaktivit\xE4t. Dabei werden die  Teilchenprozesse
-      mittels AR   veranschaulicht. Folgen Sie bitte den Anweisungen, um das Experiment
-      durchzuf\xFChren"
+      zum Einfluss der Temperatur auf die Hefeaktivit\xE4t.\nDabei werden die Teilchenprozesse
+      mithilfe von AR auf das reale Experiment projiziert. Sie k\xF6nnen so Stoff-
+      und Teilchenebene betrachten. \n\nFolgen Sie bitte den Anweisungen, um das
+      Experiment durchzuf\xFChren"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -37,7 +38,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 631500565733376
-    m_Localized: HILFEKARTEN
+    m_Localized: "AUFGABEN F\xDCR DAS FORSCHENDE LERNEN"
     m_Metadata:
       m_Items: []
   - m_Id: 631542420692992
@@ -49,10 +50,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "Die Durchf\xFChrung  Experimentierreihe \nmit drei verschiedenen                                                                                 
-      Temperatureinstellungen folgt einer          festgelegten Abfolge: Sie beginnt
-      bei 5\xB0C, dann 35\xB0C und schlie\xDFlich 100\xB0C. Die Temperaturen sollten
-      in den verschiedenen experimentellen Durchl\xE4ufen weitgehend konstant gehalten
+    m_Localized: "Die Durchf\xFChrung der Experimentierreihe mit ihren drei verschiedenen                          
+      Temperatureinstellungen folgt einer festgelegten Abfolge: Sie beginnt bei 5\xB0C,
+      geht weiter zu 35\xB0C und endet mit 100\xB0C. Die Temperaturen sollten in
+      den        verschieden experimentellen Durchl\xE4ufen weitgehend konstant gehalten
       werden."
     m_Metadata:
       m_Items:
@@ -62,24 +63,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: "In dieser AR-App kann der Prozess bei der alkoholischen G\xE4rung
-      mit Fokus auf die Enzymaktivit\xE4t durch AR-Modelle auf Teilchenebene visualisiert
-      werden."
+    m_Localized: "Bevor Sie mit der AR-App das Hefe-Experiment durchf\xFChren sollten
+      mit Blick auf das experimentelle Design \xDCberlegungen angestellt werden:"
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 747311301222400
-    m_Localized: "Enzymaktivitat h\xE4ngt von der                Temperature ab: 
-      \n\n\n\n\n\n\n\n\n\n\n\n."
+    m_Localized: '   Erwartete Beobachtungen'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 748190863548416
-    m_Localized: "5\xB0C (Kalt): Langsame Reaktion, minimale Kohlendioxidproduktion."
+    m_Localized: "Formuliere, welche Beobachtungen du bei der Durchf\xFChrung des
+      Experiments erwartest?"
     m_Metadata:
       m_Items: []
   - m_Id: 748389002469376
-    m_Localized: "35\xB0C (Raumtemperatur): Optimale Reaktion, maximale Kohlendioxidproduktion."
+    m_Localized: 'Welche Prozesse vermutest du auf Stoff- und Teilchenebene in den
+      drei Kolben? '
     m_Metadata:
       m_Items: []
   - m_Id: 748617399099392
@@ -104,7 +105,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 768958813003776
-    m_Localized: "Jetzt k\xF6nnen Sie submikroskopische Partikel sehen"
+    m_Localized: Jetzt sehen Sie die Prozesse auf Teilchenebene.
     m_Metadata:
       m_Items: []
   - m_Id: 770723339919360
@@ -113,11 +114,12 @@ MonoBehaviour:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 780107956707328
-    m_Localized: Zucker
+    m_Localized: Glukose
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 780151170621440
-    m_Localized: Hefe
+    m_Localized: Enzym
     m_Metadata:
       m_Items: []
   - m_Id: 780339817832448
@@ -145,41 +147,40 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Reaktion von Zucker und Hefe in AR
+    m_Localized: Experiment
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
-    m_Localized: "Warten Prozess unvollst\xE4ndig"
+    m_Localized: Bitte warten bis der Prozess abgeschlossen ist
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 6519001379130310666
   - m_Id: 9692779506917376
-    m_Localized: "            Dieses Symbol zeigt die aktuelle Temperatur an, in
-      diesem Fall 5\xB0C, und gibt zudem die verbleibende Zeit f\xFCr jede Phase
-      des Prozesses an. Die tats\xE4chliche Reaktion muss ebenfalls dieser Sequenz
-      folgen.\r\n\nDer Demo-Button zeigt auf Teilchenebene die ablaufende Reaktion
-      des                        Hefeexperiments an einem Beispiel  auf.\n\nN\xE4here
-      Informationen zu den Edukten und Produkten auf repr\xE4sentativer Ebene liefert
-      Ihnen die Legende."
+    m_Localized: "            Dieses Symbol zeigt die aktuelle Temperatur an, hier 
+      5\xB0C, und gibt zudem die verbleibende Zeit f\xFCr jede Phase des Prozesses
+      an. Die reale Durchf\xFChrung des Experiments sollte ebenfalls diese Abfolge
+      besitzen, sodass die reale Reaktion\nauf Basis der entsprechenden            
+      Temperaturbedingung (Stoffebene) mit der AR-Umgebung(Teilchenebene)                           
+      \xFCbereinstimmt.\n\n      Der Demo-Button zeigt auf                                   
+      Teilchenebene die Reaktion des                    Hefeexperiments an einem
+      gesonderten Beispiel auf.\n\nN\xE4here Informationen zu den Edukten und Produkten
+      auf repr\xE4sentativer Ebene liefert\nIhnen die Legende."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 10929327443369984
-    m_Localized: "     Wissenschaftliche Fragestellung: Welchen Einfluss hat die
-      Temperatur auf die Enzymaktivit\xE4t?\n\n     Die Temperatur kann einen           
-      wesentlichen Einfluss auf die Aktivit\xE4t des Enzyms haben. Welche Hypothese
-      l\xE4sst sich aufstellen? \n\nTipp: Temperaturver\xE4nderungen k\xF6nnen beispielsweise
-      beeinflussen wie schnell oder langsam eine Reaktion von statten geht."
+    m_Localized: "      Wissenschaftliche Fragestellung:                Welchen Einfluss
+      hat die Temperatur auf die Enzymaktivit\xE4t?\n\n     Hypothese\nDie Temperatur
+      kann einen            wesentlichen Einfluss auf die Aktivit\xE4t Hefe-Enzyms
+      haben. Stellen Sie eine Hypothese auf, die mit der Durchf\xFChrung des Experiments
+      gepr\xFCft wird."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 10932623373590528
-    m_Localized: "   Wenn die Temperatur als      unabh\xE4ngige Variable zu betrachten
-      ist, worauf wirkt sie? wie lautet sie       abh\xE4ngige Variable?\n\n    
-      Wenn sich die Temperatur \xE4ndert, sollte sich auch die Enzymaktivit\xE4t
-      ver\xE4ndern. Entsprechend wird da Ergebnis der alkoholischen G\xE4rung mit
-      Blick auf die Geschwindigkeit und Effektivit\xE4t unterschiedlich beeinflusst.
-      Die drei Experimente liefern             unterschiedlische Resultate. Welche
-      sind zu erwarten?\n"
+    m_Localized: "      Variablen   \n \nIn einem experimentellen Setting gibt es
+      verschiedene Variablen. Definieren Sie die abh\xE4ngige, unabh\xE4ngige und
+      Kontroll-Variablen."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -217,10 +218,35 @@ MonoBehaviour:
     m_Localized: "Die L\xF6sung ist jetzt im Men\xFC verf\xFCgbar"
     m_Metadata:
       m_Items: []
+  - m_Id: 55842918868803584
+    m_Localized: AUFGABEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55855915595030528
+    m_Localized: "Temperaturver\xE4nderungen k\xF6nnen beispielsweise beeinflussen
+      wie schnell oder langsam eine Reaktion von statten geht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55859064351318016
+    m_Localized: "Die unabh\xE4ngige Variable wirkt auf die abh\xE4ngige Variable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55861746143158272
+    m_Localized: "    Durchf\xFChrung und Auswertung des Experiments\n\nSie k\xF6nnen
+      nun zur\xFCck ins Men\xFC gehen und mit der Durchf\xFChrung starten. Protokollieren
+      Sie Ihre Beobachtungen auf Stoff - und Teilchenebene. Notieren Sie Ihr Ergebnis
+      und \xFCberpr\xFCfen Sie Ihre Hypothese und Variablen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55862171533664256
+    m_Localized: "Am ende der Durchf\xFChrung erscheint Ihnen ein FDLS - L\xF6sungsvorschlag,
+      der Ihnen bei der Auswertung des Experiments hilft."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 6519001379130310666
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc02000060258e090000000060a5105399020000606517886f22000060254063bf54000060e5b2ebc05400
+        m_Entries: 0060a5f8aca702000060e5f1c9ab02000060a578f9a502000060e5572ad426000060a5bc29d726000060e502f8bc02000060258e090000000060a5105399020000606517886f22000060254063bf54000060e5b2ebc0540000606534238d0c000060a50981c50200

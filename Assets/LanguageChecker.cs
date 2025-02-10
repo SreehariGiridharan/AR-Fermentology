@@ -1,22 +1,20 @@
 using UnityEngine;
 using UnityEngine.Localization.Settings;
-using System.Collections;
 
 public class LanguageChecker : MonoBehaviour
 {
-    public GameObject TextEng,TextGer; // The GameObject to deactivate if the language is not English
+    public GameObject TextEng, TextGer; // GameObjects for English and German text
 
-    void Start()
+    void Update()
     {
-        // Start the language check
-        StartCoroutine(CheckLanguageAndDeactivate());
+        // Ensure LocalizationSettings are initialized and the language check hasn't been performed yet
+    
+        CheckLanguageAndDeactivate();
+        
     }
 
-    private IEnumerator CheckLanguageAndDeactivate()
+    private void CheckLanguageAndDeactivate()
     {
-        // Wait until LocalizationSettings are initialized
-        yield return LocalizationSettings.InitializationOperation;
-
         // Get the current language code (e.g., "en" for English)
         string currentLanguage = LocalizationSettings.SelectedLocale.Identifier.Code;
 
@@ -25,16 +23,19 @@ public class LanguageChecker : MonoBehaviour
         // Check if the language is not English
         if (currentLanguage != "en")
         {
-            if (TextEng != null)
-            {
-                TextEng.SetActive(false); // Deactivate the target GameObject
-                TextGer.SetActive(true); // Activate the German text
-                Debug.Log("Target object has been deactivated because the language is not English.");
-            }
+            
+            
+                TextEng.SetActive(false); // Deactivate English text
+                TextGer.SetActive(true);  // Activate German text
+                Debug.Log("English text deactivated, German text activated.");
+        }
+            
             else
-            {
-                Debug.LogError("Target object is not assigned in the Inspector.");
-            }
+        {
+            
+                TextEng.SetActive(true); // Deactivate English text
+                TextGer.SetActive(false); 
+            
         }
     }
 }

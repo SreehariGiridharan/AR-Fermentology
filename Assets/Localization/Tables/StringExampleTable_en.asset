@@ -20,10 +20,12 @@ MonoBehaviour:
     - rid: 6519001379130310667
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: Welcome to the AR learning       environment for the yeast     experiment.
-      This AR app will guide you through a series of experiments on the impact of
-      temperature on yeast activity. The particle processes will be illustrated using
-      AR. Please follow the instructions to conduct the experiment.
+    m_Localized: "Welcome to the AR learning             environment for the yeast              
+      experiment. This AR app guides you through a series of experiments on the influence
+      of temperature on yeast activity.  \r\n\r\nThe particle processes are projected
+      onto the real experiment using AR, allowing you to view both the substance
+      and particle levels.  \r\n\r\nPlease follow the instructions to conduct the
+      experiment."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -36,7 +38,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 631500565733376
-    m_Localized: HELP CARDS
+    m_Localized: TASKS FOR INQUIRY-BASED LEARNING
     m_Metadata:
       m_Items: []
   - m_Id: 631542420692992
@@ -48,10 +50,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "The experimental series with three different temperature settings
-      follows a                predetermined sequence: it begins at 5\xB0C, then
-      35\xB0C, and finally 100\xB0C. The          temperatures should remain largely
-      constant during the different experimental runs."
+    m_Localized: "The experiment series with its three different temperature settings
+      follows a fixed sequence: It starts at 5\xB0C, continues at 35\xB0C, and ends
+      at 100\xB0C. The temperatures should remain largely constant throughout the
+      different experimental runs."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -60,22 +62,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: In this app, the process of alcoholic fermentation can be visualized
-      at the particle level with a focus on enzyme activity through AR models.
+    m_Localized: 'Before conducting the yeast experiment with the AR app, considerations
+      regarding the experimental design should be made:'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 747311301222400
-    m_Localized: "Enzyme activity depends on       temperature:  \n\n\n\n\n\n\n\n\n\n\n\n\n"
+    m_Localized: '  Expected Observations'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 748190863548416
-    m_Localized: "5\xB0C (Cold):  Slow reaction, minimal carbon dioxide production."
+    m_Localized: Formulate what observations you expect to make during the       
+      experiment.
     m_Metadata:
       m_Items: []
   - m_Id: 748389002469376
-    m_Localized: "35\xB0C (Room Temp): Optimal reaction, maximum carbon dioxide production."
+    m_Localized: What processes do you expect to occur at the material and particle
+      level in the three flasks?
     m_Metadata:
       m_Items: []
   - m_Id: 748617399099392
@@ -109,12 +113,12 @@ MonoBehaviour:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 780107956707328
-    m_Localized: Sugar
+    m_Localized: Glucose
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 780151170621440
-    m_Localized: Yeast
+    m_Localized: Enzyme
     m_Metadata:
       m_Items: []
   - m_Id: 780339817832448
@@ -142,37 +146,38 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Reaction of sugar and yeast in AR
+    m_Localized: Experiment
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
-    m_Localized: Wait ..process incomplete
+    m_Localized: Please wait until the process is complete.
     m_Metadata:
       m_Items: []
   - m_Id: 9692779506917376
-    m_Localized: "           This symbol displays the current temperature, in this
-      case, 5\xB0C, and also shows the remaining time for each phase of the process.
-      The actual reaction must also follow this sequence.\r\n\r\nThe demo button
-      illustrates the ongoing reaction in the yeast experiment at a particle level
-      as an example.\r\n\r\nFurther information on the reactants and products at
-      a representative level is provided by the legend."
+    m_Localized: "         This symbol displays the current temperature, here 5\xB0C,
+      and also indicates the remaining time for each phase of the process. The real
+      experiment should follow the same sequence so that the real reaction at the
+      substance level aligns with the AR environment at the particle level.  \r\n\r\n      
+      The demo button shows the reaction of the yeast experiment at the particle
+      level using a separate example.  \r\n\r\nFurther information about the reactants
+      and products at a representative level can be found in the legend."
     m_Metadata:
       m_Items: []
   - m_Id: 10929327443369984
     m_Localized: "       Scientific Question: What influence does temperature have
-      on enzyme activity?  \r\n\r\n      Temperature can have a significant impact
-      on the activity of enzymes. What hypothesis can be formulated?  \r\n\r\nTip:
-      Changes in temperature can, for example, affect how quickly or slowly a reaction
-      occurs."
+      on enzyme activity?\r\n\r\n\n     Hypothesis\nTemperature can significantly
+      affect the activity of yeast enzymes. Formulate a hypothesis that will be tested
+      during the experiment."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
   - m_Id: 10932623373590528
-    m_Localized: "   If temperature is considered the independent variable, what
-      does it act upon? What is the dependent variable?  \r\n\r\n\n    When the temperature
-      changes, the enzyme activity should also change. Consequently, the outcome
-      of alcoholic fermentation is influenced differently in terms of speed and efficiency.
-      The three experiments yield different results. What can be expected?"
+    m_Localized: '      Variables
+
+      
+
+      In an experimental setting, there
+      are different variables. Define the dependent, independent, and control variables.'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -208,6 +213,35 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 25307553049436160
     m_Localized: Solution is now available in the menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55842918868803584
+    m_Localized: TASKS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55855915595030528
+    m_Localized: Temperature changes can, for example, influence how fast or slow
+      a reaction takes place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55859064351318016
+    m_Localized: The independent variable affects the dependent variable.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55861746143158272
+    m_Localized: '   Conducting and Evaluating the Experiment
+
+      
+
+      You
+      can now return to the menu and begin the experiment. Document your observations
+      at the material and particle level. Record your results and review your hypothesis
+      and variables.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55862171533664256
+    m_Localized: At the end of the experiment, an FDLS solution proposal will appear,
+      which will assist you in evaluating the experiment.
     m_Metadata:
       m_Items: []
   references:
