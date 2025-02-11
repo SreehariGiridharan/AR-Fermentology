@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 787109197996032
-    m_Localized: Kohlenstoffdioxid
+    m_Localized: Kohlendioxid
     m_Metadata:
       m_Items: []
   - m_Id: 789098514440192
@@ -242,6 +242,10 @@ MonoBehaviour:
   - m_Id: 55862171533664256
     m_Localized: "Am ende der Durchf\xFChrung erscheint Ihnen ein FDLS - L\xF6sungsvorschlag,
       der Ihnen bei der Auswertung des Experiments hilft."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56578338166497280
+    m_Localized: Kohlendioxid
     m_Metadata:
       m_Items: []
   references:
