@@ -37,18 +37,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 319459154026496
-    m_Localized: "The reaction between yeast and sugar is a fermentation process
-      where yeast (a microorganism) breaks down sugar molecules in the absence of
-      oxygen to produce carbon dioxide  and ethanol (alcohol). This process is called
-      alcoholic fermentation.\n\nTemperature greatly affects    fermentation by influencing
-      enzyme activity in yeast. At low temperatures, enzyme activity slows, reducing
-      carbon dioxide production. Room temperature \n( around 35\xB0C) is optimal
-      for maximum carbon dioxide production, while high temperatures denature enzymes,
-      decreasing carbondioxide output and potentially killing the yeast."
+    m_Localized: "\nVerify your observations and results with the FDLS solution proposal.
+      Start with your hypotheses:  \r\n\r\n    Confirmed Hypotheses:\n\r\nH1: Carbon
+      dioxide production is highest at 35\xB0C.  \r\n\r\nH2: Carbon dioxide production
+      is minimal or absent at 5\xB0C.  \r\n\r\nH3: No carbon dioxide production occurs
+      at 100\xB0C."
     m_Metadata:
       m_Items: []
   - m_Id: 742151556521984
-    m_Localized: SOLUTION
+    m_Localized: Proposed solution
     m_Metadata:
       m_Items: []
   - m_Id: 30609360164315136
@@ -65,6 +62,62 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 31509597343014912
     m_Localized: Task 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31822467276562432
+    m_Localized: FDLS solution proposal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31830750859190272
+    m_Localized: "    Variables\n\nIndependent Variable:  Temperature with three
+      levels (5\xB0C, 35\xB0C, 100\xB0C)  \r\n\r\nDependent Variable: Enzyme activity 
+      \r\n\r\nControl Variables:  Glucose and yeast quantity, solution volume, experiment
+      duration"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31844018487123968
+    m_Localized: "     <b><color=#1A3B5D>Observations</color></b>\r\nCompare your
+      observations with the following:\r\n\r\n<b><color=#2E7D32>1. Flask at 5 \xB0C
+      (cold water):</color></b>\r\n- <b><color=#1A3B5D>Substance level:</color></b>\r\n 
+      \u2022 Few or no gas bubbles form.\r\n  \u2022 The sugar-yeast solution remains
+      at the particle level.\r\n- <b><color=#1A3B5D>Particle level:</color></b>\r\n 
+      \u2022 The particles move very slowly.\r\n  \u2022 There is minimal production
+      of carbon dioxide particles.\r\n\r\n<b><color=#2E7D32>2. Flask at 35 \xB0C
+      (Optimal temperature for yeast):</color></b>\r\n- <b><color=#1A3B5D>Substance
+      level:</color></b>\r\n  \u2022 Strong bubble and foam formation occurs.\r\n 
+      \u2022 The liquid level rises due to gas production.\r\n  \u2022 The solution
+      becomes cloudy.\r\n- <b><color=#1A3B5D>Particle level:</color></b>\r\n  \u2022
+      The particles move faster.\r\n  \u2022 Rapid formation of carbon dioxide particles
+      occurs.\r\n\r\n<b><color=#2E7D32>3. Flask at 100 \xB0C (Boiling water):</color></b>\r\n-
+      <b><color=#1A3B5D>Substance level:</color></b>\r\n  \u2022 Little to no gas
+      formation.\r\n  \u2022 The solution remains unchanged or may show slight cloudiness.\r\n-
+      <b><color=#1A3B5D>Particle level:</color></b>\r\n  \u2022 The particles move
+      very quickly.\r\n  \u2022 No chemical particle processes occur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31850546405400576
+    m_Localized: "     <b><color=#1A3B5D>Evaluation</color></b>\r\n\nWhen the temperature
+      changes, the enzyme activity also changes.\r\n\rAccordingly, the outcome of
+      alcoholic fermentation is influenced differently with regard to the speed of
+      the particles.\r\n\rThe three experiments yield different results. \n\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31894728910135296
+    m_Localized: "       <b><color=#1A3B5D>Answer to the Research Question:</color></b>\r\nEnzyme
+      activity depends on temperature:\r\n\r\n<b><color=#2E7D32>1. Flask at 5 \xB0C
+      (cold water):</color></b>\r\n- A very minimal reaction occurs.\r\n- The yeast
+      shows little to no activity.\r\n- <b><color=#1A3B5D>Reason:</color></b> The
+      yeast is not dead, but its metabolism is significantly slowed at this temperature.\r\n\r\n<b><color=#2E7D32>2.
+      Flask at 35 \xB0C (Optimal Temperature):</color></b>\r\n- A vigorous reaction
+      occurs.\r\n- This leads to strong yeast activity.\r\n- <b><color=#1A3B5D>Reason:</color></b>
+      35 \xB0C is an ideal temperature for the enzymatic activity of yeast, especially
+      for alcoholic fermentation.\r\n\r\n<b><color=#2E7D32>3. Flask at 100 \xB0C
+      (Boiling Water):</color></b>\r\n- No reaction occurs.\r\n- The yeast is denatured,
+      as proteins and enzymes break down at this temperature.\r\n- <b><color=#1A3B5D>Reason:</color></b>
+      Yeast dies at high temperatures, and the enzymes are irreversibly damaged.\r\n\r\n<b><color=#1A3B5D>Result</color></b>\r\n-
+      Yeast is barely active at 5 \xB0C.\r\n- At 35 \xB0C, enzyme activity is at
+      its highest, and strong fermentation occurs.\r\n- At 100 \xB0C, no fermentation
+      occurs.\n\n"
     m_Metadata:
       m_Items: []
   references:

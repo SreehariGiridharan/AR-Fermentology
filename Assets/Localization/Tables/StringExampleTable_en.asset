@@ -62,8 +62,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: 'Before conducting the yeast experiment with the AR app, considerations
-      regarding the experimental design should be made:'
+    m_Localized: Before conducting the yeast experiment with the AR app, considerations
+      regarding the experimental design should be made. Please take notes for this
+      purpose.
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -146,7 +147,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Experiment
+    m_Localized: Yeast-Experiment
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
@@ -174,10 +175,10 @@ MonoBehaviour:
   - m_Id: 10932623373590528
     m_Localized: '      Variables
 
-      
 
-      In an experimental setting, there
-      are different variables. Define the dependent, independent, and control variables.'
+
+      In an experimental setting, there are
+      different variables. Define the dependent, independent, and control variables.'
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -231,11 +232,11 @@ MonoBehaviour:
   - m_Id: 55861746143158272
     m_Localized: '   Conducting and Evaluating the Experiment
 
-      
 
-      You
-      can now return to the menu and begin the experiment. Document your observations
-      at the material and particle level. Record your results and review your hypothesis
+
+      You can now
+      return to the menu and begin the experiment. Document your observations at
+      the material and particle level. Record your results and review your hypothesis
       and variables.'
     m_Metadata:
       m_Items: []

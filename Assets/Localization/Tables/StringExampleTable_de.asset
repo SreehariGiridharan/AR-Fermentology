@@ -63,8 +63,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 745440842964992
-    m_Localized: "Bevor Sie mit der AR-App das Hefe-Experiment durchf\xFChren sollten
-      mit Blick auf das experimentelle Design \xDCberlegungen angestellt werden:"
+    m_Localized: "Bevor Sie mit der AR-App das Hefe-Experiment durchf\xFChren,  sollten
+      mit Blick auf das experimentelle Design \xDCberlegungen angestellt werden.
+      Machen Sie sich hierf\xFCr bitte Notizen."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -74,12 +75,12 @@ MonoBehaviour:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 748190863548416
-    m_Localized: "Formuliere, welche Beobachtungen du bei der Durchf\xFChrung des
+    m_Localized: "Formuliere, welche Beobachtungen Sie bei der Durchf\xFChrung des
       Experiments erwartest?"
     m_Metadata:
       m_Items: []
   - m_Id: 748389002469376
-    m_Localized: 'Welche Prozesse vermutest du auf Stoff- und Teilchenebene in den
+    m_Localized: 'Welche Prozesse vermutest Sie auf Stoff- und Teilchenebene in den
       drei Kolben? '
     m_Metadata:
       m_Items: []
@@ -147,7 +148,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3218946948161536
-    m_Localized: Experiment
+    m_Localized: Hefe-Experiment
     m_Metadata:
       m_Items: []
   - m_Id: 3532882062958592
@@ -171,8 +172,8 @@ MonoBehaviour:
   - m_Id: 10929327443369984
     m_Localized: "      Wissenschaftliche Fragestellung:                Welchen Einfluss
       hat die Temperatur auf die Enzymaktivit\xE4t?\n\n     Hypothese\nDie Temperatur
-      kann einen            wesentlichen Einfluss auf die Aktivit\xE4t Hefe-Enzyms
-      haben. Stellen Sie eine Hypothese auf, die mit der Durchf\xFChrung des Experiments
+      kann einen wesentlichen Einfluss auf die Aktivit\xE4t des Hefe-Enzyms haben.
+      Stellen Sie eine Hypothese auf, die mit der Durchf\xFChrung des Experiments
       gepr\xFCft wird."
     m_Metadata:
       m_Items:
