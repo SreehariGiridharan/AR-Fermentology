@@ -12,7 +12,7 @@ public class StartCode : MonoBehaviour
         Temp100
     }
 
-    public ObjectState currentTempState;
+    public static ObjectState currentTempState;
 
     // UI Image references for different temperature states
     public Image[] targetImages; // Drag and drop the images in order (Temp5, Temp35, Temp100)

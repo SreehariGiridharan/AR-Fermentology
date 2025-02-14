@@ -10,13 +10,11 @@ public class menu_changer : MonoBehaviour
     public float delay = 10.0f;            // Time delay in seconds
 
     // Start is called before the first frame update
+
    
-    // Coroutine to run the function after a delay
-    public bool Temperature100 = false;
-    private IEnumerator ActivateAfterDelay()
+    public void SolutionShower()
     {
         // Wait for the specified delay
-        yield return new WaitForSeconds(delay);
         if (objectToDeactivate != null)
         {
             objectToDeactivate.SetActive(false);
@@ -40,13 +38,4 @@ public class menu_changer : MonoBehaviour
         
     }
 
-
-    // Function to deactivate one object and activate another
-    public void ChangeObjects()
-    {
-        if(Temperature100)
-        {
-        StartCoroutine(ActivateAfterDelay());
-        }
-    }
 }

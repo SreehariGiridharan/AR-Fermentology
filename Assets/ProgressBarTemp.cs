@@ -11,7 +11,7 @@ public class ProgressBarTemp : MonoBehaviour
         Temp100
     }
 
-    public ObjectState currentTempState;
+    public static ObjectState currentTempState;
     public Image progressBar; // Reference to the Image component
     public float duration = 5f; // Duration in seconds for the progress bar to fill
     public Button targetButton1, targetButton2, targetButton3; // Reference to the Button components
@@ -25,7 +25,7 @@ public class ProgressBarTemp : MonoBehaviour
     public string animationName;
     public int determiner = 0;
      public Image targetImage1, targetImage2, targetImage3; // Reference to the Image component
-     public GameObject menu_changer;
+     
     void OnEnable()
     {
          switch (currentTempState)
@@ -44,8 +44,7 @@ public class ProgressBarTemp : MonoBehaviour
             case ObjectState.Temp100:
                 determiner = 2;
                 duration = 10f; 
-                menu_changer scriptA = menu_changer.GetComponent<menu_changer>();
-                scriptA.Temperature100 = true;
+
                 
                 break;
         }
@@ -114,6 +113,8 @@ public class ProgressBarTemp : MonoBehaviour
     private void OnProgressComplete()
     {
         Debug.Log("Progress bar is filled!");
+        FindObjectOfType<TaskManager>().MarkTaskAsCompleted();
+
 
         if (animator != null && !string.IsNullOrEmpty(animationName))
         {
@@ -131,12 +132,12 @@ public class ProgressBarTemp : MonoBehaviour
 
             if (targetButton2 != null)
             {
-                targetButton2.interactable = false;  // Enable the button
+                targetButton2.interactable = true;  // Enable the button
             }
 
             if (targetButton3 != null)
             {
-                targetButton3.interactable = false;  // Enable the button
+                targetButton3.interactable = true;  // Enable the button
             }
 
             if (ProcessIncompleteButton != null)
@@ -148,7 +149,7 @@ public class ProgressBarTemp : MonoBehaviour
         {
             if (targetButton1 != null)
             {
-                targetButton1.interactable = false;  // Enable the button
+                targetButton1.interactable = true;  // Enable the button
             }
 
             if (targetButton2 != null)
@@ -158,7 +159,7 @@ public class ProgressBarTemp : MonoBehaviour
 
             if (targetButton3 != null)
             {
-                targetButton3.interactable = false;  // Enable the button
+                targetButton3.interactable = true;  // Enable the button
             }
 
             if (ProcessIncompleteButton != null)
@@ -170,12 +171,12 @@ public class ProgressBarTemp : MonoBehaviour
         {
             if (targetButton1 != null)
             {
-                targetButton1.interactable = false;  // Enable the button
+                targetButton1.interactable = true;  // Enable the button
             }
 
             if (targetButton2 != null)
             {
-                targetButton2.interactable = false;  // Enable the button
+                targetButton2.interactable = true;  // Enable the button
             }
 
             if (targetButton3 != null)

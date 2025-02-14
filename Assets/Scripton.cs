@@ -12,7 +12,7 @@ public class Scripton : MonoBehaviour
         Temp100
     }
 
-    public ObjectState currentTempState;
+    public static ObjectState currentTempState;
 
     void Start()
     {

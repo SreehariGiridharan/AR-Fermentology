@@ -24,7 +24,7 @@ public class AttractAndAttach : MonoBehaviour
         Temp100
     }
     public VuforiaCameraZoom Zoom;
-    public ObjectState currentTempState;
+    public static ObjectState currentTempState;
 
     public List<ObjectPair> objectPairs = new List<ObjectPair>(); // List of pairs of objects
    

@@ -7,13 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/5 deg Reaction.unity
-    guid: ccc1edb0e04824a4fbefef6a0352eaf1
+    guid: e8b8b62fc5ba73142a15ebade85feded
   - enabled: 1
     path: Assets/Scenes/35 deg Reaction.unity
-    guid: 79313a1244e02214bb1dc04a28281261
+    guid: 1446d02c91aba474283925e57b90ecb7
   - enabled: 1
     path: Assets/Scenes/100 deg Reaction.unity
-    guid: ca099940282f5b947bc9ca667f93ff84
+    guid: 5ef390b013dedff479f3e2a2cf640aed
+  - enabled: 0
+    path: Assets/Scenes/Orginal_scene.unity
+    guid: f728f1033fdeccb4684aa6dd986cb77b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 52a24c000c74510429daf08b3e2d83df, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: d11cc5162570eda40b8fafa5e1f020c3, type: 2}
