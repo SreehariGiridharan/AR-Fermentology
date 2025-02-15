@@ -4692,13 +4692,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139463925}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.06620001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1600878583}
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5627,19 +5627,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 760168371}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.025342206
+      value: 0.029374152
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.025342207
+      value: 0.029374162
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.025342207
+      value: 0.029374162
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5647,19 +5647,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.016700007
+      value: 0.14649998
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.052700035
+      value: 0.1448
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
       propertyPath: m_LocalRotation.y
@@ -6172,12 +6172,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168562987}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -84.187225, y: 0.12792969, z: 1552.5177}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -84.187225, y: 1552.7458, z: -0.000073835254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171331358
 GameObject:
@@ -6923,10 +6923,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Die Durchf\xFChrung der Experimentierreihe mit ihren drei verschiedenen                          
+  m_text: "Die Durchf\xFChrung der Experimentierreihe\nmit ihren drei verschiedenen 
     Temperatureinstellungen folgt einer festgelegten Abfolge: Sie beginnt bei 5\xB0C,
-    geht weiter zu 35\xB0C und endet mit 100\xB0C. Die Temperaturen sollten in den       
-    verschieden experimentellen Durchl\xE4ufen weitgehend konstant gehalten werden."
+    geht weiter zu 35\xB0C und endet mit 100\xB0C. Die Temperaturen sollten in den
+    verschieden realen experimentellen Durchl\xE4ufen weitgehend konstant gehalten
+    werden."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8534,9 +8535,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216691548}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.017699972, z: -0.19860016}
-  m_LocalScale: {x: 0.25159964, y: 0.25159943, z: 0.25159943}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.028799757, z: 0.1458}
+  m_LocalScale: {x: 0.25159964, y: 0.2515995, z: 0.2515995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 842120929}
@@ -8566,7 +8567,7 @@ Transform:
   - {fileID: 849208594}
   - {fileID: 121010958}
   - {fileID: 713028309}
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220152886
 GameObject:
@@ -9172,11 +9173,10 @@ MonoBehaviour:
   m_text: "            Dieses Symbol zeigt die aktuelle Temperatur an, hier  5\xB0C,
     und gibt zudem die verbleibende Zeit f\xFCr jede Phase des Prozesses an. Die
     reale Durchf\xFChrung des Experiments sollte ebenfalls diese Abfolge besitzen,
-    sodass die reale Reaktion\nauf Basis der entsprechenden             Temperaturbedingung
-    (Stoffebene) mit der AR-Umgebung(Teilchenebene)                            \xFCbereinstimmt.\n\n     
-    Der Demo-Button zeigt auf                                    Teilchenebene die
-    Reaktion des                    Hefeexperiments an einem gesonderten Beispiel
-    auf.\n\nN\xE4here Informationen zu den Edukten und Produkten auf repr\xE4sentativer
+    sodass die reale Reaktion auf Basis der entsprechenden Temperaturbedingung (Stoffebene)
+    mit der AR- Umgebung(Teilchenebene) \xFCbereinstimmt.\n\n     Der Demo-Button
+    zeigt auf Teilchenebene die Reaktion des Hefe-Experiments an einem gesonderten
+    Beispiel auf.\n\nN\xE4here Informationen zu den Edukten und Produkten auf repr\xE4sentativer
     Ebene liefert\nIhnen die Legende."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20900,8 +20900,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What processes do you expect to occur at the material and particle level
-    in the three flasks?
+  m_text: 'Welche Prozesse vermuten Sie auf Stoff- und Teilchenebene in den drei
+    Kolben? '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21073,7 +21073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &533033351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21144,8 +21144,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533033350}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.06620001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21174,11 +21174,11 @@ RectTransform:
   - {fileID: 793512312}
   - {fileID: 928436364}
   - {fileID: 1301027683}
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.1281}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &533277018
@@ -21820,7 +21820,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 760168371}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalScale.x
@@ -21828,11 +21828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1299998
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1299998
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21840,19 +21840,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01729998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.22740003
+      value: 0.1454
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
       propertyPath: m_LocalRotation.y
@@ -28340,11 +28340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ad91bf1e6f06024c87e41289ffd2172, type: 3}
   m_PrefabInstance: {fileID: 399713838}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &713343808 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54e98e8f775b7294fa1c82daaebc70fb, type: 3}
-  m_PrefabInstance: {fileID: 555880991}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714346840
 GameObject:
   m_ObjectHideFlags: 0
@@ -30369,11 +30364,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to the AR learning             environment for the yeast              
-    experiment. This AR app guides you through a series of experiments on the influence
-    of temperature on yeast activity.  \r\n\r\nThe particle processes are projected
-    onto the real experiment using AR, allowing you to view both the substance and
-    particle levels.  \r\n\r\nPlease follow the instructions to conduct the experiment."
+  m_text: "Willkommen in der AR-             Lernumgebung f\xFCr das Hefe-Experiment.
+    Diese AR-App begleitet Sie bei der Durchf\xFChrung einer Experimentierreihe zum
+    Einfluss der Temperatur auf die Hefe-Enzymeaktivit\xE4t.\nDabei werden die Teilchenprozesse
+    mithilfe von AR auf das reale Experiment projiziert. Sie k\xF6nnen so Stoff-
+    und Teilchenebene betrachten. \n\nFolgen Sie bitte den Anweisungen, um das Experiment
+    durchzuf\xFChren."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30610,23 +30606,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.2274, z: 0.1281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1211549091}
-  - {fileID: 533033354}
-  - {fileID: 1653267853}
-  - {fileID: 1430977298}
-  - {fileID: 139463929}
-  - {fileID: 1854836626}
-  - {fileID: 1523925514}
-  - {fileID: 216691553}
-  - {fileID: 1442360909}
-  - {fileID: 1999440818}
-  - {fileID: 713343808}
-  - {fileID: 1207409704}
-  - {fileID: 1414244927}
-  - {fileID: 168562989}
-  - {fileID: 1038204260}
-  - {fileID: 1828558686}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &760168372
@@ -42232,7 +42212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b4ffc566573fe43954ecf3164149b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedOption: 0
+  selectedOption: 1
 --- !u!4 &1038204260
 Transform:
   m_ObjectHideFlags: 0
@@ -42241,12 +42221,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038204258}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -84.187225, y: 0.12792969, z: 1552.5177}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -84.187225, y: 1552.7458, z: -0.000073835254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040011169
 GameObject:
@@ -44387,7 +44367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.18151855, y: -20.8}
+  m_AnchoredPosition: {x: 0.18151855, y: -27.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1092978890
@@ -47510,13 +47490,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '   Conducting and Evaluating the Experiment
-
-
-
-    You can now return
-    to the menu and begin the experiment. Document your observations at the material
-    and particle level. Record your results and review your hypothesis and variables.'
+  m_text: "    Durchf\xFChrung und Auswertung des Experiments\n\nSie k\xF6nnen nun
+    zur\xFCck ins Men\xFC gehen und mit der Durchf\xFChrung starten. Protokollieren
+    Sie Ihre Beobachtungen auf Stoff - und Teilchenebene. Notieren Sie Ihr Ergebnis
+    und \xFCberpr\xFCfen Sie nach der Durchf\xFChrung Ihre Hypothesen und Variablen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48194,11 +48171,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4869060128648782554, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
   m_PrefabInstance: {fileID: 161084631}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1207409704 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3197468385903434703, guid: 8ef7bc665d306db41b5e7c0dd0c3d891, type: 3}
-  m_PrefabInstance: {fileID: 161084631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1209951805
 GameObject:
   m_ObjectHideFlags: 0
@@ -48480,12 +48452,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211549090}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 267.1507, y: 71.00897, z: 656.98975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 267.1507, y: 657.21735, z: -70.880936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1211549092
 MonoBehaviour:
@@ -50504,14 +50476,14 @@ RectTransform:
   m_GameObject: {fileID: 1299542929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.32139182, y: 0.061387807, z: 0.14816679}
+  m_LocalScale: {x: 0.3698304, y: 0.061387807, z: 0.14816679}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 643143308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.9, y: -22}
+  m_AnchoredPosition: {x: -0.50754, y: -31.700006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299542931
@@ -53196,7 +53168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kohlendioxid
+  m_text: Kohlenstoffdioxid
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -53223,8 +53195,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
-  m_fontSizeBase: 27
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -55487,16 +55459,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414244926}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.06593496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00026504695}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 0.12836502}
+  m_AnchoredPosition: {x: -540, y: 0.12836504}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414244928
@@ -55956,13 +55928,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430977294}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.06620001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1882005642}
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -56582,12 +56554,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442360907}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 370.14362, y: 3560.0647, z: 351.2744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 370.14362, y: 351.5013, z: -3559.938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1442360910
 MonoBehaviour:
@@ -59805,11 +59777,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2542572457695166602, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
   m_PrefabInstance: {fileID: 7045332851757051771}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1523925514 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
-  m_PrefabInstance: {fileID: 7045332851757051771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1525864555
 GameObject:
   m_ObjectHideFlags: 0
@@ -60002,7 +59969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1530479770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60012,14 +59979,14 @@ RectTransform:
   m_GameObject: {fileID: 1530479769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28597546, y: 0.26183218, z: 4.295857}
+  m_LocalScale: {x: 0.22025257, y: 0.2016579, z: 3.308583}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 229601306}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86.78006, y: -185.37666}
+  m_AnchoredPosition: {x: -90, y: -167}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530479771
@@ -60546,7 +60513,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Formulate what observations you expect to make during the        experiment.
+  m_text: "Formulieren Sie, welche Beobachtungen Sie bei der Durchf\xFChrung des
+    Experiments erwarten?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63869,7 +63837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1653267850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63946,7 +63914,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1124986268}
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -71881,12 +71849,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828558685}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -84.187225, y: 0.12792969, z: 1552.5177}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -84.187225, y: 1552.7458, z: -0.000073835254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1828558687
 MonoBehaviour:
@@ -72570,12 +72538,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854836623}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.10850009, z: -0.22740002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.019599885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1858947093 stripped
 Transform:
@@ -73544,7 +73512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Please wait until the process is complete.
+  m_text: Please wait until the process is complete
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -78142,12 +78110,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999440817}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0002, y: -0.017499983, z: -0.20240015}
-  m_LocalScale: {x: 0.09124985, y: 0.018392757, z: 0.09124983}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0002, y: 0.024999768, z: 0.1456}
+  m_LocalScale: {x: 0.09124985, y: 0.01839276, z: 0.09124984}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 760168371}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1999440819
 CapsuleCollider:
@@ -83017,14 +82985,14 @@ RectTransform:
   m_GameObject: {fileID: 2128091133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.32139182, y: 0.13294598, z: 0.14816679}
+  m_LocalScale: {x: 0.3698304, y: 0.13294598, z: 0.14816679}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 643143308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.9, y: -22}
+  m_AnchoredPosition: {x: -0.39246, y: -20.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128091135
@@ -84086,7 +84054,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 760168371}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 30904713150506359, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_Color.b
@@ -84126,19 +84094,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.022037134
+      value: 0.030521646
       objectReference: {fileID: 0}
     - target: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.19687827
+      value: 0.10606289
       objectReference: {fileID: 0}
     - target: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 967225827053520290, guid: a7b52fbed09efeb46b45ed1e675d6136, type: 3}
       propertyPath: m_LocalRotation.y
@@ -84979,6 +84947,22 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1569827384}
+  - {fileID: 1211549091}
+  - {fileID: 533033354}
+  - {fileID: 1653267853}
+  - {fileID: 1430977298}
+  - {fileID: 139463929}
+  - {fileID: 1854836626}
+  - {fileID: 7045332851757051771}
+  - {fileID: 216691553}
+  - {fileID: 1442360909}
+  - {fileID: 1999440818}
+  - {fileID: 555880991}
+  - {fileID: 161084631}
+  - {fileID: 1414244927}
+  - {fileID: 168562989}
+  - {fileID: 1038204260}
+  - {fileID: 1828558686}
   - {fileID: 760168371}
   - {fileID: 652521979}
   - {fileID: 1833889426}

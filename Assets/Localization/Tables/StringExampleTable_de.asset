@@ -50,10 +50,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 731531994030080
-    m_Localized: "Die Durchf\xFChrung der Experimentierreihe mit ihren drei verschiedenen                          
+    m_Localized: "Die Durchf\xFChrung der Experimentierreihe\nmit ihren drei verschiedenen 
       Temperatureinstellungen folgt einer festgelegten Abfolge: Sie beginnt bei 5\xB0C,
       geht weiter zu 35\xB0C und endet mit 100\xB0C. Die Temperaturen sollten in
-      den        verschieden experimentellen Durchl\xE4ufen weitgehend konstant gehalten
+      den verschieden realen experimentellen Durchl\xE4ufen weitgehend konstant gehalten
       werden."
     m_Metadata:
       m_Items:
@@ -75,12 +75,12 @@ MonoBehaviour:
       m_Items:
       - rid: 6519001379130310666
   - m_Id: 748190863548416
-    m_Localized: "Formuliere, welche Beobachtungen Sie bei der Durchf\xFChrung des
-      Experiments erwartest?"
+    m_Localized: "Formulieren Sie, welche Beobachtungen Sie bei der Durchf\xFChrung
+      des Experiments erwarten?"
     m_Metadata:
       m_Items: []
   - m_Id: 748389002469376
-    m_Localized: 'Welche Prozesse vermutest Sie auf Stoff- und Teilchenebene in den
+    m_Localized: 'Welche Prozesse vermuten Sie auf Stoff- und Teilchenebene in den
       drei Kolben? '
     m_Metadata:
       m_Items: []
@@ -160,12 +160,11 @@ MonoBehaviour:
     m_Localized: "            Dieses Symbol zeigt die aktuelle Temperatur an, hier 
       5\xB0C, und gibt zudem die verbleibende Zeit f\xFCr jede Phase des Prozesses
       an. Die reale Durchf\xFChrung des Experiments sollte ebenfalls diese Abfolge
-      besitzen, sodass die reale Reaktion\nauf Basis der entsprechenden            
-      Temperaturbedingung (Stoffebene) mit der AR-Umgebung(Teilchenebene)                           
-      \xFCbereinstimmt.\n\n      Der Demo-Button zeigt auf                                   
-      Teilchenebene die Reaktion des                    Hefeexperiments an einem
-      gesonderten Beispiel auf.\n\nN\xE4here Informationen zu den Edukten und Produkten
-      auf repr\xE4sentativer Ebene liefert\nIhnen die Legende."
+      besitzen, sodass die reale Reaktion auf Basis der entsprechenden Temperaturbedingung
+      (Stoffebene) mit der AR- Umgebung(Teilchenebene) \xFCbereinstimmt.\n\n    
+      Der Demo-Button zeigt auf Teilchenebene die Reaktion des Hefe-Experiments an
+      einem gesonderten Beispiel auf.\n\nN\xE4here Informationen zu den Edukten und
+      Produkten auf repr\xE4sentativer Ebene liefert\nIhnen die Legende."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -236,7 +235,7 @@ MonoBehaviour:
     m_Localized: "    Durchf\xFChrung und Auswertung des Experiments\n\nSie k\xF6nnen
       nun zur\xFCck ins Men\xFC gehen und mit der Durchf\xFChrung starten. Protokollieren
       Sie Ihre Beobachtungen auf Stoff - und Teilchenebene. Notieren Sie Ihr Ergebnis
-      und \xFCberpr\xFCfen Sie Ihre Hypothese und Variablen."
+      und \xFCberpr\xFCfen Sie nach der Durchf\xFChrung Ihre Hypothesen und Variablen."
     m_Metadata:
       m_Items: []
   - m_Id: 55862171533664256
@@ -245,7 +244,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 56578338166497280
-    m_Localized: Kohlendioxid
+    m_Localized: Kohlenstoffdioxid
     m_Metadata:
       m_Items: []
   references:
