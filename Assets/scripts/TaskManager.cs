@@ -58,6 +58,8 @@ public class TaskManager : MonoBehaviour
         PlayerPrefs.DeleteKey(Task1Key);
         PlayerPrefs.DeleteKey(Task2Key);
         PlayerPrefs.DeleteKey(Task3Key);
+        PlayerPrefs.DeleteAll();
+
         PlayerPrefs.Save();
 
         Debug.Log("Task progress has been reset.");

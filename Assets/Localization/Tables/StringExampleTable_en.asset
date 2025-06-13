@@ -20,12 +20,12 @@ MonoBehaviour:
     - rid: 6519001379130310667
   m_TableData:
   - m_Id: 41039519744
-    m_Localized: "Welcome to the AR learning             environment for the yeast              
-      experiment. This AR app guides you through a series of experiments on the influence
-      of temperature on yeast activity.  \r\n\r\nThe particle processes are projected
-      onto the real experiment using AR, allowing you to view both the substance
-      and particle levels.  \r\n\r\nPlease follow the instructions to conduct the
-      experiment."
+    m_Localized: "Welcome to the AR learning environment for the yeast experiment.
+      This AR app guides you through a series of experiments on the influence of
+      temperature on yeast enzyme activity.  \r\n\r\nThe particle processes are projected
+      onto the real experiment using AR, allowing you to observe both the substance
+      and particle levels.  \r\n\r\n<b>Please read the tasks before starting the
+      experiment.</b>  \r\n\r\nPlease follow the instructions to conduct the experiment."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310667
@@ -247,6 +247,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 56578338166497280
     m_Localized: Carbon dioxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58430483878731776
+    m_Localized: Please read the tasks before starting the experiment.
     m_Metadata:
       m_Items: []
   references:

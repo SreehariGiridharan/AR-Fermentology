@@ -22,10 +22,11 @@ MonoBehaviour:
   - m_Id: 41039519744
     m_Localized: "Willkommen in der AR-             Lernumgebung f\xFCr das Hefe-Experiment.
       Diese AR-App begleitet Sie bei der Durchf\xFChrung einer Experimentierreihe
-      zum Einfluss der Temperatur auf die Hefeaktivit\xE4t.\nDabei werden die Teilchenprozesse
-      mithilfe von AR auf das reale Experiment projiziert. Sie k\xF6nnen so Stoff-
-      und Teilchenebene betrachten. \n\nFolgen Sie bitte den Anweisungen, um das
-      Experiment durchzuf\xFChren"
+      zum Einfluss der Temperatur auf die Hefe-Enzyme-aktivit\xE4t.\nDabei werden
+      die Teilchenprozesse mithilfe von AR auf das reale Experiment projiziert. Sie
+      k\xF6nnen so Stoff- und Teilchenebene betrachten.\n\n<b>Bitte lesen Sie die
+      Aufgaben, bevor Sie mit dem Experiment beginnen.</b> \n\nFolgen Sie bitte den
+      Anweisungen, um das Experiment durchzuf\xFChren."
     m_Metadata:
       m_Items:
       - rid: 6519001379130310666
@@ -161,7 +162,7 @@ MonoBehaviour:
       5\xB0C, und gibt zudem die verbleibende Zeit f\xFCr jede Phase des Prozesses
       an. Die reale Durchf\xFChrung des Experiments sollte ebenfalls diese Abfolge
       besitzen, sodass die reale Reaktion auf Basis der entsprechenden Temperaturbedingung
-      (Stoffebene) mit der AR- Umgebung(Teilchenebene) \xFCbereinstimmt.\n\n    
+      (Stoffebene) mit der AR-Umgebung (Teilchenebene) \xFCbereinstimmt.\n\n    
       Der Demo-Button zeigt auf Teilchenebene die Reaktion des Hefe-Experiments an
       einem gesonderten Beispiel auf.\n\nN\xE4here Informationen zu den Edukten und
       Produkten auf repr\xE4sentativer Ebene liefert\nIhnen die Legende."
@@ -245,6 +246,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 56578338166497280
     m_Localized: Kohlenstoffdioxid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58430483878731776
+    m_Localized: 'Bitte lesen Sie die Aufgaben, bevor Sie mit dem Experiment beginnen. '
     m_Metadata:
       m_Items: []
   references:

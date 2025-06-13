@@ -40,9 +40,12 @@ MonoBehaviour:
   - m_Id: 319459154026496
     m_Localized: "\xDCberpr\xFCfen Sie Ihre Beobachtungen und Ergebnisse mit dem
       FDLS-L\xF6sungsvorschlag. Beginnen Sie mit \r\nIhren Hypothesen: \n\n    Best\xE4tigte
-      Hypothesen:\n \r\nH1: Die Kohlenstoffdioxid-Produktion ist bei 35\xB0C am h\xF6chsten.\n\nH2:
-      Die Kohlenstoffdioxid-Produktion ist bei 5\xB0C minimal bis nicht vorhanden.\n\nH3:
-      Es findet keine Kohlenstoffdioxid-Produktion bei 100\xB0C statt."
+      Hypothesen:\n \r\nH1: Diese Temperatur hat einen starken Einfluss auf die Enzym-Aktivit\xE4t,
+      da die Kohlenstoffdioxid-Produktion ist bei 35\xB0C am h\xF6chsten ist.\n\nH2:
+      Diese Temperatur hat kaum Einfluss auf die Enzyme-Aktivit\xE4t, da die Kohlenstoffdioxid-Produktion
+      ist bei 5\xB0C minimal bis nicht vorhanden ist.\n\nH3: Diese Temperatur hat
+      einen starken Einfluss auf die Enzym-Aktivit\xE4t, da keine Kohlenstoffdioxid-Produktion
+      bei 100\xB0C statt findet."
     m_Metadata:
       m_Items: []
   - m_Id: 742151556521984
@@ -79,18 +82,19 @@ MonoBehaviour:
   - m_Id: 31844018487123968
     m_Localized: "     <b><color=#1A3B5D>Beobachtungen</color></b>\r\nVergleichen
       Sie Ihre Beobachtungen mit den Nachstehenden:\r\n\r\n<b><color=#2E7D32>1. Kolben
-      mit 5 \xB0C (kaltes Wasser):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
+      mit 5\xB0C (kaltes Wasser):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
       \u2022 Es bilden sich nur wenige oder gar keine Gasblasen.\r\n  \u2022 Die
-      Zucker-Hefe-L\xF6sung bleibt auf Teilchenebene.\r\n- <b><color=#1A3B5D>Teilchenebene:</color></b>\r\n 
-      \u2022 Die Teilchen bewegen sich sehr langsam.\r\n  \u2022 Es findet eine geringe
-      Produktion von Kohlenstoffdioxid-\n    Teilchen statt.\r\n\r\n<b><color=#2E7D32>2.
-      Kolben mit 35 \xB0C (Optimale Temperatur f\xFCr Hefe):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
+      Zucker-Hefe-L\xF6sung bleibt weitgehend unver\xE4ndert \n    Teilchenebene.\r\n-
+      <b><color=#1A3B5D>Teilchenebene:</color></b>\r\n  \u2022 Die Teilchen bewegen
+      sich sehr langsam.\r\n  \u2022 Es findet eine geringe Produktion von Kohlenstoffdioxid-\n   
+      Teilchen statt.\r\n\r\n<b><color=#2E7D32>2. Kolben mit 35\xB0C (Optimale Temperatur
+      f\xFCr Hefe):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
       \u2022 Es findet eine starke Bl\xE4schen- und Schaumbildung statt.\r\n  \u2022
       Der Fl\xFCssigkeitspegel hebt sich durch die Gasproduktion.\r\n  \u2022 Die
       L\xF6sung wird tr\xFCber.\r\n- <b><color=#1A3B5D>Teilchenebene:</color></b>\r\n 
       \u2022 Die Teilchen bewegen sich schneller.\r\n  \u2022 Es erfolgt eine schnelle
       Bildung von Kohlenstoffdioxid-\n    Teilchen.\r\n\r\n<b><color=#2E7D32>3. Kolben
-      mit 100 \xB0C (Kochendes Wasser):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
+      mit 100\xB0C (Kochendes Wasser):</color></b>\r\n- <b><color=#1A3B5D>Stoffebene:</color></b>\r\n 
       \u2022 Keine oder sehr geringe Gasbildung.\r\n  \u2022 Die L\xF6sung bleibt
       unver\xE4ndert oder kann eine leichte \n    Tr\xFCbung zeigen.\r\n- <b><color=#1A3B5D>Teilchenebene:</color></b>\r\n 
       \u2022 Die Teilchen bewegen sich sehr schnell.\r\n  \u2022 Es finden keine
@@ -98,29 +102,29 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 31850546405400576
-    m_Localized: "     <b><color=#1A3B5D>Auswertung</color></b>\r\nWenn sich die
+    m_Localized: "     <b><color=#1A3B5D>Auswertung</color></b>\r\n\nWenn sich die
       Temperatur \xE4ndert, ver\xE4ndert sich auch die Enzymaktivit\xE4t.\r                                   
       \nEntsprechend wird das Ergebnis der alkoholischen G\xE4rung mit Blick auf
-      die Geschwindigkeit der Teilchen unterschiedlich beeinflusst.\r                                    
+      die Geschwindigkeit der Teilchen   unterschiedlich beeinflusst.\r                                   
       Die drei Experimente liefern unterschiedliche Resultate. "
     m_Metadata:
       m_Items: []
   - m_Id: 31894728910135296
     m_Localized: "      <b><color=#1A3B5D>Beantwortung der Forschungsfrage:</color></b>\r\nDie
       Enzymaktivit\xE4t h\xE4ngt von der Temperatur ab:\r\n\r\n<b><color=#2E7D32>1.
-      Kolben mit 5 \xB0C (kaltes Wasser):</color></b>\r\n- Es findet eine sehr minimale
+      Kolben mit 5\xB0C (kaltes Wasser):</color></b>\r\n- Es findet eine sehr minimale
       Reaktion statt.\r\n- Die Hefe zeigt kaum oder gar keine Aktivit\xE4t.\r\n-
       <b><color=#1A3B5D>Grund:</color></b> Die Hefe ist zwar nicht tot, aber ihr
       Stoffwechsel ist bei dieser Temperatur stark verlangsamt.\r\n\r\n<b><color=#2E7D32>2.
-      Kolben mit 35 \xB0C (Optimale Temperatur):</color></b>\r\n- Es findet eine
-      heftige Reaktion statt.\r\n- Diese f\xFChrt zu einer starken Aktivit\xE4t der
-      Hefe.\r\n- <b><color=#1A3B5D>Grund:</color></b> 35 \xB0C ist eine ideale Temperatur
-      f\xFCr die enzymatische Aktivit\xE4t der Hefe, insbesondere f\xFCr die alkoholische
-      G\xE4rung.\r\n\r\n<b><color=#2E7D32>3. Kolben mit 100 \xB0C (Kochendes Wasser):</color></b>\r\n-
+      Kolben mit 35\xB0C (Optimale Temperatur):</color></b>\r\n- Es findet eine heftige
+      Reaktion statt.\r\n- Diese f\xFChrt zu einer starken Aktivit\xE4t der Hefe.\r\n-
+      <b><color=#1A3B5D>Grund:</color></b> 35\xB0C ist eine ideale Temperatur f\xFCr
+      die enzymatische Aktivit\xE4t der Hefe, insbesondere f\xFCr die alkoholische
+      G\xE4rung.\r\n\r\n<b><color=#2E7D32>3. Kolben mit 100\xB0C (Kochendes Wasser):</color></b>\r\n-
       Es findet keine Reaktion statt.\r\n- Die Hefe wird denaturiert, da Proteine
       und Enzyme bei dieser Temperatur zerfallen.\r\n- <b><color=#1A3B5D>Grund:</color></b>
       Hefe stirbt bei hohen Temperaturen, und die Enzyme sind irreversibel gesch\xE4digt.\r\n\r\n<b><color=#1A3B5D>Ergebnis</color></b>\r\n-
-      Hefe ist bei 5 \xB0C kaum aktiv.\r\n- Bei 35 \xB0C ist die Enzymaktivit\xE4t
+      Hefe ist bei 5\xB0C kaum aktiv.\r\n- Bei 35\xB0C ist die Enzymaktivit\xE4t
       am h\xF6chsten, es findet eine starke G\xE4rung statt.\r\n- Es findet keine
       G\xE4rung statt."
     m_Metadata:

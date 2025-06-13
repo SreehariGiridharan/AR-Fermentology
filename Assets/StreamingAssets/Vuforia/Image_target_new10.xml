@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="qr_code_grayscale-0_024" size="0.024000 0.024000" />
+    <ImageTarget name="qr_code_grayscale-0_023" size="0.023000 0.023000" />
+    <ImageTarget name="qr_code_grayscale-copy" size="0.022000 0.022000" />
+    <ImageTarget name="qr_code_grayscale-0_018" size="0.018000 0.018000" />
+    <ImageTarget name="qr_code_grayscale_0_01" size="0.010000 0.010000" />
+  </Tracking>
+</QCARConfig>

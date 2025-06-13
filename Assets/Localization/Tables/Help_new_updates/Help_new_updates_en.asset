@@ -37,11 +37,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 319459154026496
-    m_Localized: "\nVerify your observations and results with the FDLS solution proposal.
-      Start with your hypotheses:  \r\n\r\n    Confirmed Hypotheses:\n\r\nH1: Carbon
-      dioxide production is highest at 35\xB0C.  \r\n\r\nH2: Carbon dioxide production
-      is minimal or absent at 5\xB0C.  \r\n\r\nH3: No carbon dioxide production occurs
-      at 100\xB0C."
+    m_Localized: "Check your observations and results against the FDLS solution proposal.
+      Start with your hypotheses:  \r\n\r\n\n    Confirmed Hypotheses:\n\r\nH1: This
+      temperature has a strong influence on enzyme activity, as carbon dioxide production
+      is highest at 35\xB0C.  \r\n\r\nH2: This temperature has little influence on
+      enzyme activity, as carbon dioxide production is minimal or nonexistent at
+      5\xB0C.  \r\n\r\nH3: This temperature has a strong influence on enzyme activity,
+      as no carbon dioxide production occurs at 100\xB0C."
     m_Metadata:
       m_Items: []
   - m_Id: 742151556521984
@@ -77,22 +79,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 31844018487123968
     m_Localized: "     <b><color=#1A3B5D>Observations</color></b>\r\nCompare your
-      observations with the following:\r\n\r\n<b><color=#2E7D32>1. Flask at 5 \xB0C
+      observations with the following:\r\n\r\n<b><color=#2E7D32>1. Flask at 5\xB0C
       (cold water):</color></b>\r\n- <b><color=#1A3B5D>Substance level:</color></b>\r\n 
       \u2022 Few or no gas bubbles form.\r\n  \u2022 The sugar-yeast solution remains
       at the particle level.\r\n- <b><color=#1A3B5D>Particle level:</color></b>\r\n 
       \u2022 The particles move very slowly.\r\n  \u2022 There is minimal production
-      of carbon dioxide particles.\r\n\r\n<b><color=#2E7D32>2. Flask at 35 \xB0C
-      (Optimal temperature for yeast):</color></b>\r\n- <b><color=#1A3B5D>Substance
-      level:</color></b>\r\n  \u2022 Strong bubble and foam formation occurs.\r\n 
-      \u2022 The liquid level rises due to gas production.\r\n  \u2022 The solution
-      becomes cloudy.\r\n- <b><color=#1A3B5D>Particle level:</color></b>\r\n  \u2022
-      The particles move faster.\r\n  \u2022 Rapid formation of carbon dioxide particles
-      occurs.\r\n\r\n<b><color=#2E7D32>3. Flask at 100 \xB0C (Boiling water):</color></b>\r\n-
-      <b><color=#1A3B5D>Substance level:</color></b>\r\n  \u2022 Little to no gas
-      formation.\r\n  \u2022 The solution remains unchanged or may show slight cloudiness.\r\n-
+      of carbon dioxide particles.\r\n\r\n<b><color=#2E7D32>2. Flask at 35\xB0C (Optimal
+      temperature for yeast):</color></b>\r\n- <b><color=#1A3B5D>Substance level:</color></b>\r\n 
+      \u2022 Strong bubble and foam formation occurs.\r\n  \u2022 The liquid level
+      rises due to gas production.\r\n  \u2022 The solution becomes cloudy.\r\n-
       <b><color=#1A3B5D>Particle level:</color></b>\r\n  \u2022 The particles move
-      very quickly.\r\n  \u2022 No chemical particle processes occur."
+      faster.\r\n  \u2022 Rapid formation of carbon dioxide particles occurs.\r\n\r\n<b><color=#2E7D32>3.
+      Flask at 100\xB0C (Boiling water):</color></b>\r\n- <b><color=#1A3B5D>Substance
+      level:</color></b>\r\n  \u2022 Little to no gas formation.\r\n  \u2022 The
+      solution remains unchanged or may show slight cloudiness.\r\n- <b><color=#1A3B5D>Particle
+      level:</color></b>\r\n  \u2022 The particles move very quickly.\r\n  \u2022
+      No chemical particle processes occur."
     m_Metadata:
       m_Items: []
   - m_Id: 31850546405400576
@@ -104,19 +106,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 31894728910135296
     m_Localized: "       <b><color=#1A3B5D>Answer to the Research Question:</color></b>\r\nEnzyme
-      activity depends on temperature:\r\n\r\n<b><color=#2E7D32>1. Flask at 5 \xB0C
+      activity depends on temperature:\r\n\r\n<b><color=#2E7D32>1. Flask at 5\xB0C
       (cold water):</color></b>\r\n- A very minimal reaction occurs.\r\n- The yeast
       shows little to no activity.\r\n- <b><color=#1A3B5D>Reason:</color></b> The
       yeast is not dead, but its metabolism is significantly slowed at this temperature.\r\n\r\n<b><color=#2E7D32>2.
-      Flask at 35 \xB0C (Optimal Temperature):</color></b>\r\n- A vigorous reaction
+      Flask at 35\xB0C (Optimal Temperature):</color></b>\r\n- A vigorous reaction
       occurs.\r\n- This leads to strong yeast activity.\r\n- <b><color=#1A3B5D>Reason:</color></b>
-      35 \xB0C is an ideal temperature for the enzymatic activity of yeast, especially
-      for alcoholic fermentation.\r\n\r\n<b><color=#2E7D32>3. Flask at 100 \xB0C
-      (Boiling Water):</color></b>\r\n- No reaction occurs.\r\n- The yeast is denatured,
-      as proteins and enzymes break down at this temperature.\r\n- <b><color=#1A3B5D>Reason:</color></b>
+      35\xB0C is an ideal temperature for the enzymatic activity of yeast, especially
+      for alcoholic fermentation.\r\n\r\n<b><color=#2E7D32>3. Flask at 100\xB0C (Boiling
+      Water):</color></b>\r\n- No reaction occurs.\r\n- The yeast is denatured, as
+      proteins and enzymes break down at this temperature.\r\n- <b><color=#1A3B5D>Reason:</color></b>
       Yeast dies at high temperatures, and the enzymes are irreversibly damaged.\r\n\r\n<b><color=#1A3B5D>Result</color></b>\r\n-
-      Yeast is barely active at 5 \xB0C.\r\n- At 35 \xB0C, enzyme activity is at
-      its highest, and strong fermentation occurs.\r\n- At 100 \xB0C, no fermentation
+      Yeast is barely active at 5\xB0C.\r\n- At 35\xB0C, enzyme activity is at its
+      highest, and strong fermentation occurs.\r\n- At 100\xB0C, no fermentation
       occurs.\n\n"
     m_Metadata:
       m_Items: []

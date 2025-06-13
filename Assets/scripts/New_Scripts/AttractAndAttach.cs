@@ -101,16 +101,18 @@ public class AttractAndAttach : MonoBehaviour
                 
                 break;
             case ObjectState.Temp35:
-                H20NotificationBool = false;
+                Water.SetActive(true);
+                H20NotificationBool = true;
                 DelayAfterH20Disappearance=0.0f;
                 attractionForce = 0.003f;
-                Zoom.H20ListBool = false;
+                Zoom.H20ListBool = true;
                 Zoom.AttractionScriptBool = true;
                 assigningTemp35Pairs();
                 break;
             case ObjectState.Temp100:
-                H20NotificationBool = false;
-                Zoom.H20ListBool = false;
+                Water.SetActive(true);
+                H20NotificationBool = true;
+                Zoom.H20ListBool = true;
                 Zoom.AttractionScriptBool = false;
                 break;
         }
@@ -349,6 +351,8 @@ public class AttractAndAttach : MonoBehaviour
             // Spawn the object at the final position and rotation relative to the parent
             GameObject newObject = Instantiate(spawnPrefab1, transform.parent);
             GameObject newObject1 = Instantiate(spawnPrefab2, transform.parent);
+            newObject1.SetActive(true); // Ensure the spawned object is active
+            newObject.SetActive(true); // Ensure the spawned object is active
 
             newObject.transform.localPosition = localPosition;
             newObject.transform.localRotation = localRotation;

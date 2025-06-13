@@ -41,7 +41,7 @@ public class MoveWithinCircle : MonoBehaviour
         {
             if (changer)
             {
-                angleX=Random.Range(120.0f, 130.0f);
+                angleX=120.0f;
                 angleY=0.0f;
                 angleZ=0.0f;
                 RotateAngle(angleX, angleY, angleZ);
@@ -55,7 +55,7 @@ public class MoveWithinCircle : MonoBehaviour
             if (changer)
             {
                 angleX=0.0f;
-                angleY=Random.Range(120.0f, 130.0f);
+                angleY=120.0f;
                 angleZ=0.0f;
                 RotateAngle(angleX, angleY, angleZ);
                 changer=false;
@@ -67,7 +67,7 @@ public class MoveWithinCircle : MonoBehaviour
         {
             if (changer)
             {
-                angleX=Random.Range(120.0f, 130.0f);
+                angleX=120.0f;
                 angleY=0.0f;
                 angleZ=0.0f;
                 RotateAngle(angleX, angleY, angleZ);
