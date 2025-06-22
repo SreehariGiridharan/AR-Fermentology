@@ -73,3 +73,7 @@ crashlytics-build.properties
 
 # Vuforia packages
 *.tgz
+
+# Json API
+/Assets/GeminiManager/JSON_KEY_TEMPLATE.json
+/Assets/GeminiManager/JSON_KEY_TEMPLATE.json.meta
